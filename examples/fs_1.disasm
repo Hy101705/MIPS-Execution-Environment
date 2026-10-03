@@ -1,0 +1,48 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      6      [0x3c041001]    lui    $a0, 4097               #  la      $a0, path
+1             [0x34840000]    ori    $a0, $a0, 0
+2      7      [0x34050001]    ori    $a1, $zero, 1           #  li      $a1, FLAGS_WRITE_ONLY
+3      8      [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+4      9      [0x0000000c]    syscall                        #  syscall
+5      10     [0x00024021]    addu   $t0, $zero, $v0         #  move    $t0, $v0
+6      12     [0x00082021]    addu   $a0, $zero, $t0         #  move    $a0, $t0
+7      13     [0x3c051001]    lui    $a1, 4097               #  la      $a1, my_data
+8             [0x34a5000d]    ori    $a1, $a1, 13
+9      14     [0x2006000c]    addi   $a2, $zero, 12          #  li      $a2, 12
+10     15     [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14 # try read...
+11     16     [0x0000000c]    syscall                        #  syscall
+12     17     [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+13     18     [0x0000000c]    syscall                        #  syscall
+14     19     [0x00a22821]    addu   $a1, $a1, $v0           #  addu    $a1, $a1, $v0
+15     20     [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+16     21     [0x0000000c]    syscall                        #  syscall         # do another write
+17     23     [0x3c041001]    lui    $a0, 4097               #  la      $a0, path
+18            [0x34840000]    ori    $a0, $a0, 0
+19     24     [0x34050000]    ori    $a1, $zero, 0           #  li      $a1, FLAGS_READ_ONLY
+20     25     [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+21     26     [0x0000000c]    syscall                        #  syscall
+22     27     [0x00024821]    addu   $t1, $zero, $v0         #  move    $t1, $v0
+
+loop_read:
+23     30     [0x00092021]    addu   $a0, $zero, $t1         #  move    $a0, $t1
+24     31     [0x3c051001]    lui    $a1, 4097               #  la      $a1, read_buf
+25            [0x34a5000c]    ori    $a1, $a1, 12
+26     32     [0x20060001]    addi   $a2, $zero, 1           #  li      $a2, 1
+27     33     [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+28     34     [0x0000000c]    syscall                        #  syscall
+29     35     [0x34010001]    ori    $at, $zero, 1           #  bne     $v0, 1, exit
+30            [0x14410007]    bne    $v0, $at, exit
+31     37     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+32     38     [0x3c011001]    lui    $at, 4097               #  lb      $a0, read_buf
+33            [0x3421000c]    ori    $at, $at, 12
+34            [0x80240000]    lb     $a0, ($at)
+35     39     [0x0000000c]    syscall                        #  syscall
+36     41     [0x1000fff3]    beq    $zero, $zero, loop_read #  b       loop_read
+
+exit:
+37     44     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+38     45     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 37 bytes

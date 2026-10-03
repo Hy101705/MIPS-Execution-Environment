@@ -1,0 +1,21 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x3c081001]    lui    $t0, 4097               #  la      $t0, my_array
+1             [0x35080000]    ori    $t0, $t0, 0
+2      5      [0x00082021]    addu   $a0, $zero, $t0         #  move    $a0, $t0
+3      6      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+4      7      [0x0000000c]    syscall                        #  syscall
+5      10     [0x8d040000]    lw     $a0, ($t0)              #  lw      $a0, ($t0)
+6      11     [0x0000000c]    syscall                        #  syscall
+7      14     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+8      15     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+9      16     [0x0000000c]    syscall                        #  syscall
+10     18     [0x25080002]    addiu  $t0, $t0, 2             #  addiu   $t0, $t0, 2
+11     21     [0x8d040000]    lw     $a0, ($t0)              #  lw      $a0, ($t0)
+12     23     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+13     24     [0x0000000c]    syscall                        #  syscall
+14     26     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+15     27     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 8 bytes

@@ -1,0 +1,67 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      7      [0x3c1ffeff]    lui    $ra, 65279              #  li      $ra, -16779279
+1             [0x37fff7f1]    ori    $ra, $ra, 63473
+2      9      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+3      10     [0x03e02051]    clo    $a0, $ra                #  clo     $a0, $ra
+4      11     [0x0000000c]    syscall                        #  syscall
+5      13     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+6      14     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+7      15     [0x0000000c]    syscall                        #  syscall
+8      20     [0x3c0e7eff]    lui    $t6, 32511              #  li      $t6, 2130704369
+9             [0x35cef7f1]    ori    $t6, $t6, 63473
+10     22     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+11     23     [0x01c02051]    clo    $a0, $t6                #  clo     $a0, $t6
+12     24     [0x0000000c]    syscall                        #  syscall
+13     26     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+14     27     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+15     28     [0x0000000c]    syscall                        #  syscall
+16     33     [0x201fffff]    addi   $ra, $zero, -1          #  li      $ra, -1
+17     35     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+18     36     [0x03e02051]    clo    $a0, $ra                #  clo     $a0, $ra
+19     37     [0x0000000c]    syscall                        #  syscall
+20     39     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+21     40     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+22     41     [0x0000000c]    syscall                        #  syscall
+23     46     [0x201f0000]    addi   $ra, $zero, 0           #  li      $ra, 0
+24     48     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+25     49     [0x03e02051]    clo    $a0, $ra                #  clo     $a0, $ra
+26     50     [0x0000000c]    syscall                        #  syscall
+27     52     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+28     53     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+29     54     [0x0000000c]    syscall                        #  syscall
+30     59     [0x3c1ffeff]    lui    $ra, 65279              #  li      $ra, -16779279
+31            [0x37fff7f1]    ori    $ra, $ra, 63473
+32     61     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+33     62     [0x03e02050]    clz    $a0, $ra                #  clz     $a0, $ra
+34     63     [0x0000000c]    syscall                        #  syscall
+35     65     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+36     66     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+37     67     [0x0000000c]    syscall                        #  syscall
+38     72     [0x3c0e7eff]    lui    $t6, 32511              #  li      $t6, 2130704369
+39            [0x35cef7f1]    ori    $t6, $t6, 63473
+40     74     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+41     75     [0x01c02050]    clz    $a0, $t6                #  clz     $a0, $t6
+42     76     [0x0000000c]    syscall                        #  syscall
+43     78     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+44     79     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+45     80     [0x0000000c]    syscall                        #  syscall
+46     85     [0x201fffff]    addi   $ra, $zero, -1          #  li      $ra, -1
+47     87     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+48     88     [0x03e02050]    clz    $a0, $ra                #  clz     $a0, $ra
+49     89     [0x0000000c]    syscall                        #  syscall
+50     91     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+51     92     [0x2004002c]    addi   $a0, $zero, 44          #  li      $a0, ','
+52     93     [0x0000000c]    syscall                        #  syscall
+53     98     [0x201f0000]    addi   $ra, $zero, 0           #  li      $ra, 0
+54     100    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+55     101    [0x03e02050]    clz    $a0, $ra                #  clz     $a0, $ra
+56     102    [0x0000000c]    syscall                        #  syscall
+57     104    [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+58     105    [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+59     106    [0x0000000c]    syscall                        #  syscall
+60     108    [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+61     109    [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

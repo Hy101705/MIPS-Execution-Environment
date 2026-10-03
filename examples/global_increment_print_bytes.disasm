@@ -1,0 +1,46 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      6      [0x3c011001]    lui    $at, 4097               #  lw      $t1, global_counter
+1             [0x34210000]    ori    $at, $at, 0
+2             [0x8c290000]    lw     $t1, ($at)
+3      7      [0x21290001]    addi   $t1, $t1, 1             #  addi    $t1, $t1, 1
+4      8      [0x3c011001]    lui    $at, 4097               #  sw      $t1, global_counter     # global_counter = global_counter + 1;
+5             [0x34210000]    ori    $at, $at, 0
+6             [0xac290000]    sw     $t1, ($at)
+7      10     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+8      11     [0x3c081001]    lui    $t0, 4097               #  la      $t0, global_counter     #
+9             [0x35080000]    ori    $t0, $t0, 0
+10     12     [0x8d040000]    lw     $a0, ($t0)              #  lw      $a0, 0($t0)
+11     13     [0x0000000c]    syscall                        #  syscall                         # printf("%d", global_counter);
+12     15     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                 # syscall 11: print_char
+13     16     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+14     17     [0x0000000c]    syscall                        #  syscall                         # putchar('\n');
+15     19     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+16     20     [0x3c011001]    lui    $at, 4097               #  lb      $a0, global_counter
+17            [0x34210000]    ori    $at, $at, 0
+18            [0x80240000]    lb     $a0, ($at)
+19     21     [0x0000000c]    syscall                        #  syscall
+20     23     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                 # syscall 11: print_char
+21     24     [0x20040020]    addi   $a0, $zero, 32          #  li      $a0, ' '
+22     25     [0x0000000c]    syscall                        #  syscall                         # putchar('\n');
+23     27     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+24     28     [0x3c011001]    lui    $at, 4097               #  lb      $a0, global_counter + 1
+25            [0x34210001]    ori    $at, $at, 1
+26            [0x80240000]    lb     $a0, ($at)
+27     29     [0x0000000c]    syscall                        #  syscall
+28     31     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                 # syscall 11: print_char
+29     32     [0x20040020]    addi   $a0, $zero, 32          #  li      $a0, ' '
+30     33     [0x0000000c]    syscall                        #  syscall                         # putchar('\n');
+31     35     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+32     36     [0x3c011001]    lui    $at, 4097               #  lb      $a0, global_counter + 2
+33            [0x34210002]    ori    $at, $at, 2
+34            [0x80240000]    lb     $a0, ($at)
+35     37     [0x0000000c]    syscall                        #  syscall
+36     39     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+37     40     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+38     41     [0x0000000c]    syscall                        #  syscall
+39     43     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+40     44     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 4 bytes

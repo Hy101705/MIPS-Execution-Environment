@@ -1,0 +1,17 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      3      [0x20100004]    addi   $s0, $zero, 4           #  li      $s0, 4
+1      4      [0x20110003]    addi   $s1, $zero, 3           #  li      $s1, 3
+2      5      [0x72108002]    mul    $s0, $s0, $s0           #  mul     $s0, $s0, $s0
+3      6      [0x72318802]    mul    $s1, $s1, $s1           #  mul     $s1, $s1, $s1
+4      7      [0x02302020]    add    $a0, $s1, $s0           #  add     $a0, $s1, $s0
+5      9      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+6      10     [0x0000000c]    syscall                        #  syscall
+7      12     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+8      13     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+9      14     [0x0000000c]    syscall                        #  syscall
+10     16     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+11     17     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

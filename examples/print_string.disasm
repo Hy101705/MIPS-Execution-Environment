@@ -1,0 +1,23 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x3c081001]    lui    $t0, 4097               #  la      $t0, my_string
+1             [0x35080000]    ori    $t0, $t0, 0
+
+loop:
+2      4      [0x81090003]    lb     $t1, 3($t0)             #  lb      $t1, 3($t0)
+3      5      [0x11200005]    beq    $t1, $zero, print       #  beqz    $t1, print
+4      7      [0x2529fff9]    addiu  $t1, $t1, -7            #  addiu   $t1, $t1, -7
+5      8      [0xa1090003]    sb     $t1, 3($t0)             #  sb      $t1, 3($t0)
+6      10     [0x25080001]    addiu  $t0, $t0, 1             #  addiu   $t0, $t0, 1
+7      11     [0x1000fffb]    beq    $zero, $zero, loop      #  b       loop
+
+print:
+8      14     [0x3c041001]    lui    $a0, 4097               #  la      $a0, my_string
+9             [0x34840000]    ori    $a0, $a0, 0
+10     15     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+11     16     [0x0000000c]    syscall                        #  syscall
+12     18     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+13     19     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 61 bytes

@@ -1,0 +1,729 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      3      [0x20000000]    addi   $zero, $zero, 0         #  addi    $0, $zero, 0
+1      4      [0x20010000]    addi   $at, $zero, 0           #  addi    $1, $zero, 0
+2      5      [0x20020000]    addi   $v0, $zero, 0           #  addi    $2, $zero, 0
+3      6      [0x20030000]    addi   $v1, $zero, 0           #  addi    $3, $zero, 0
+4      7      [0x20040000]    addi   $a0, $zero, 0           #  addi    $4, $zero, 0
+5      8      [0x20050000]    addi   $a1, $zero, 0           #  addi    $5, $zero, 0
+6      9      [0x20060000]    addi   $a2, $zero, 0           #  addi    $6, $zero, 0
+7      10     [0x20070000]    addi   $a3, $zero, 0           #  addi    $7, $zero, 0
+8      11     [0x20080000]    addi   $t0, $zero, 0           #  addi    $8, $zero, 0
+9      12     [0x20090000]    addi   $t1, $zero, 0           #  addi    $9, $zero, 0
+10     13     [0x200a0000]    addi   $t2, $zero, 0           #  addi    $10, $zero, 0
+11     14     [0x200b0000]    addi   $t3, $zero, 0           #  addi    $11, $zero, 0
+12     15     [0x200c0000]    addi   $t4, $zero, 0           #  addi    $12, $zero, 0
+13     16     [0x200d0000]    addi   $t5, $zero, 0           #  addi    $13, $zero, 0
+14     17     [0x200e0000]    addi   $t6, $zero, 0           #  addi    $14, $zero, 0
+15     18     [0x200f0000]    addi   $t7, $zero, 0           #  addi    $15, $zero, 0
+16     19     [0x20100000]    addi   $s0, $zero, 0           #  addi    $16, $zero, 0
+17     20     [0x20110000]    addi   $s1, $zero, 0           #  addi    $17, $zero, 0
+18     21     [0x20120000]    addi   $s2, $zero, 0           #  addi    $18, $zero, 0
+19     22     [0x20130000]    addi   $s3, $zero, 0           #  addi    $19, $zero, 0
+20     23     [0x20140000]    addi   $s4, $zero, 0           #  addi    $20, $zero, 0
+21     24     [0x20150000]    addi   $s5, $zero, 0           #  addi    $21, $zero, 0
+22     25     [0x20160000]    addi   $s6, $zero, 0           #  addi    $22, $zero, 0
+23     26     [0x20170000]    addi   $s7, $zero, 0           #  addi    $23, $zero, 0
+24     27     [0x20180000]    addi   $t8, $zero, 0           #  addi    $24, $zero, 0
+25     28     [0x20190000]    addi   $t9, $zero, 0           #  addi    $25, $zero, 0
+26     29     [0x201a0000]    addi   $k0, $zero, 0           #  addi    $26, $zero, 0
+27     30     [0x201b0000]    addi   $k1, $zero, 0           #  addi    $27, $zero, 0
+28     31     [0x201c0000]    addi   $gp, $zero, 0           #  addi    $28, $zero, 0
+29     32     [0x201d0000]    addi   $sp, $zero, 0           #  addi    $29, $zero, 0
+30     33     [0x201e0000]    addi   $fp, $zero, 0           #  addi    $30, $zero, 0
+31     34     [0x201f0000]    addi   $ra, $zero, 0           #  addi    $31, $zero, 0
+32     35     [0x3c070cd0]    lui    $a3, 3280               #  lui     $7, 3280
+33     36     [0x210eac83]    addi   $t6, $t0, -21373        #  addi    $14, $8, -21373
+34     37     [0x3c1b2ff8]    lui    $k1, 12280              #  lui     $27, 12280
+35     38     [0x202e56cb]    addi   $t6, $at, 22219         #  addi    $14, $1, 22219
+36     39     [0x223c8353]    addi   $gp, $s1, -31917        #  addi    $28, $17, -31917
+37     40     [0x22bbee3d]    addi   $k1, $s5, -4547         #  addi    $27, $21, -4547
+38     41     [0x34a637cc]    ori    $a2, $a1, 14284         #  ori     $6, $5, 14284
+39     42     [0x34503fe9]    ori    $s0, $v0, 16361         #  ori     $16, $2, 16361
+40     43     [0x36453928]    ori    $a1, $s2, 14632         #  ori     $5, $18, 14632
+41     44     [0x3c0c1776]    lui    $t4, 6006               #  lui     $12, 6006
+42     45     [0x3c0e28da]    lui    $t6, 10458              #  lui     $14, 10458
+43     46     [0x23063acb]    addi   $a2, $t8, 15051         #  addi    $6, $24, 15051
+44     47     [0x22d708b1]    addi   $s7, $s6, 2225          #  addi    $23, $22, 2225
+45     48     [0x3c04579f]    lui    $a0, 22431              #  lui     $4, 22431
+46     49     [0x3c0f4247]    lui    $t7, 16967              #  lui     $15, 16967
+47     50     [0x368e1ca3]    ori    $t6, $s4, 7331          #  ori     $14, $20, 7331
+48     51     [0x2282a1e3]    addi   $v0, $s4, -24093        #  addi    $2, $20, -24093
+49     52     [0x21b44a90]    addi   $s4, $t5, 19088         #  addi    $20, $13, 19088
+50     53     [0x3c1d477d]    lui    $sp, 18301              #  lui     $29, 18301
+51     54     [0x23704c7e]    addi   $s0, $k1, 19582         #  addi    $16, $27, 19582
+52     55     [0x350e2e8b]    ori    $t6, $t0, 11915         #  ori     $14, $8, 11915
+53     56     [0x21275825]    addi   $a3, $t1, 22565         #  addi    $7, $9, 22565
+54     57     [0x3c046fa4]    lui    $a0, 28580              #  lui     $4, 28580
+55     58     [0x3c101092]    lui    $s0, 4242               #  lui     $16, 4242
+56     59     [0x22272e2b]    addi   $a3, $s1, 11819         #  addi    $7, $17, 11819
+57     60     [0x237281a9]    addi   $s2, $k1, -32343        #  addi    $18, $27, -32343
+58     61     [0x3c10002a]    lui    $s0, 42                 #  lui     $16, 42
+59     62     [0x2266e5d7]    addi   $a2, $s3, -6697         #  addi    $6, $19, -6697
+60     63     [0x2157804a]    addi   $s7, $t2, -32694        #  addi    $23, $10, -32694
+61     64     [0x3c143946]    lui    $s4, 14662              #  lui     $20, 14662
+62     65     [0x35f32852]    ori    $s3, $t7, 10322         #  ori     $19, $15, 10322
+63     66     [0x209f8002]    addi   $ra, $a0, -32766        #  addi    $31, $4, -32766
+64     67     [0x23c80002]    addi   $t0, $fp, 2             #  addi    $8, $30, 2
+65     68     [0x35bb002a]    ori    $k1, $t5, 42            #  ori     $27, $13, 42
+66     69     [0x3c0c4c48]    lui    $t4, 19528              #  lui     $12, 19528
+67     70     [0x3c176729]    lui    $s7, 26409              #  lui     $23, 26409
+68     71     [0x21cf8ac5]    addi   $t7, $t6, -30011        #  addi    $15, $14, -30011
+69     72     [0x3c0e03ae]    lui    $t6, 942                #  lui     $14, 942
+70     73     [0x21c39015]    addi   $v1, $t6, -28651        #  addi    $3, $14, -28651
+71     74     [0x35e47888]    ori    $a0, $t7, 30856         #  ori     $4, $15, 30856
+72     75     [0x23c87229]    addi   $t0, $fp, 29225         #  addi    $8, $30, 29225
+73     76     [0x34cc5cb2]    ori    $t4, $a2, 23730         #  ori     $12, $6, 23730
+74     77     [0x375b1bbc]    ori    $k1, $k0, 7100          #  ori     $27, $26, 7100
+75     78     [0x3c062db9]    lui    $a2, 11705              #  lui     $6, 11705
+76     79     [0x218f65b0]    addi   $t7, $t4, 26032         #  addi    $15, $12, 26032
+77     80     [0x217bffe6]    addi   $k1, $t3, -26           #  addi    $27, $11, -26
+78     81     [0x20dc878e]    addi   $gp, $a2, -30834        #  addi    $28, $6, -30834
+79     82     [0x214f7674]    addi   $t7, $t2, 30324         #  addi    $15, $10, 30324
+80     83     [0x2079811a]    addi   $t9, $v1, -32486        #  addi    $25, $3, -32486
+81     84     [0x37b0792c]    ori    $s0, $sp, 31020         #  ori     $16, $29, 31020
+82     86     [0x20040000]    addi   $a0, $zero, 0           #  addi    $a0, $0, 0
+83     87     [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+84     88     [0x0000000c]    syscall                        #  syscall                 # printf("%d", $0)
+85     89     [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+86     90     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+87     91     [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+88     92     [0x20240000]    addi   $a0, $at, 0             #  addi    $a0, $1, 0
+89     93     [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+90     94     [0x0000000c]    syscall                        #  syscall                 # printf("%d", $1)
+91     95     [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+92     96     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+93     97     [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+94     98     [0x20640000]    addi   $a0, $v1, 0             #  addi    $a0, $3, 0
+95     99     [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+96     100    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $3)
+97     101    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+98     102    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+99     103    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+100    104    [0x20a40000]    addi   $a0, $a1, 0             #  addi    $a0, $5, 0
+101    105    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+102    106    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $5)
+103    107    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+104    108    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+105    109    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+106    110    [0x20c40000]    addi   $a0, $a2, 0             #  addi    $a0, $6, 0
+107    111    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+108    112    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $6)
+109    113    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+110    114    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+111    115    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+112    116    [0x20e40000]    addi   $a0, $a3, 0             #  addi    $a0, $7, 0
+113    117    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+114    118    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $7)
+115    119    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+116    120    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+117    121    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+118    122    [0x21040000]    addi   $a0, $t0, 0             #  addi    $a0, $8, 0
+119    123    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+120    124    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $8)
+121    125    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+122    126    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+123    127    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+124    128    [0x21240000]    addi   $a0, $t1, 0             #  addi    $a0, $9, 0
+125    129    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+126    130    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $9)
+127    131    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+128    132    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+129    133    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+130    134    [0x21440000]    addi   $a0, $t2, 0             #  addi    $a0, $10, 0
+131    135    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+132    136    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $10)
+133    137    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+134    138    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+135    139    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+136    140    [0x21640000]    addi   $a0, $t3, 0             #  addi    $a0, $11, 0
+137    141    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+138    142    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $11)
+139    143    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+140    144    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+141    145    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+142    146    [0x21840000]    addi   $a0, $t4, 0             #  addi    $a0, $12, 0
+143    147    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+144    148    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $12)
+145    149    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+146    150    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+147    151    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+148    152    [0x21a40000]    addi   $a0, $t5, 0             #  addi    $a0, $13, 0
+149    153    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+150    154    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $13)
+151    155    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+152    156    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+153    157    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+154    158    [0x21c40000]    addi   $a0, $t6, 0             #  addi    $a0, $14, 0
+155    159    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+156    160    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $14)
+157    161    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+158    162    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+159    163    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+160    164    [0x21e40000]    addi   $a0, $t7, 0             #  addi    $a0, $15, 0
+161    165    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+162    166    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $15)
+163    167    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+164    168    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+165    169    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+166    170    [0x22040000]    addi   $a0, $s0, 0             #  addi    $a0, $16, 0
+167    171    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+168    172    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $16)
+169    173    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+170    174    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+171    175    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+172    176    [0x22240000]    addi   $a0, $s1, 0             #  addi    $a0, $17, 0
+173    177    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+174    178    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $17)
+175    179    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+176    180    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+177    181    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+178    182    [0x22440000]    addi   $a0, $s2, 0             #  addi    $a0, $18, 0
+179    183    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+180    184    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $18)
+181    185    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+182    186    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+183    187    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+184    188    [0x22640000]    addi   $a0, $s3, 0             #  addi    $a0, $19, 0
+185    189    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+186    190    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $19)
+187    191    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+188    192    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+189    193    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+190    194    [0x22840000]    addi   $a0, $s4, 0             #  addi    $a0, $20, 0
+191    195    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+192    196    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $20)
+193    197    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+194    198    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+195    199    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+196    200    [0x22a40000]    addi   $a0, $s5, 0             #  addi    $a0, $21, 0
+197    201    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+198    202    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $21)
+199    203    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+200    204    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+201    205    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+202    206    [0x22c40000]    addi   $a0, $s6, 0             #  addi    $a0, $22, 0
+203    207    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+204    208    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $22)
+205    209    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+206    210    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+207    211    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+208    212    [0x22e40000]    addi   $a0, $s7, 0             #  addi    $a0, $23, 0
+209    213    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+210    214    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $23)
+211    215    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+212    216    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+213    217    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+214    218    [0x23040000]    addi   $a0, $t8, 0             #  addi    $a0, $24, 0
+215    219    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+216    220    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $24)
+217    221    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+218    222    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+219    223    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+220    224    [0x23240000]    addi   $a0, $t9, 0             #  addi    $a0, $25, 0
+221    225    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+222    226    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $25)
+223    227    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+224    228    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+225    229    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+226    230    [0x23440000]    addi   $a0, $k0, 0             #  addi    $a0, $26, 0
+227    231    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+228    232    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $26)
+229    233    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+230    234    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+231    235    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+232    236    [0x23640000]    addi   $a0, $k1, 0             #  addi    $a0, $27, 0
+233    237    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+234    238    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $27)
+235    239    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+236    240    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+237    241    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+238    242    [0x23840000]    addi   $a0, $gp, 0             #  addi    $a0, $28, 0
+239    243    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+240    244    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $28)
+241    245    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+242    246    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+243    247    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+244    248    [0x23a40000]    addi   $a0, $sp, 0             #  addi    $a0, $29, 0
+245    249    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+246    250    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $29)
+247    251    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+248    252    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+249    253    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+250    254    [0x23c40000]    addi   $a0, $fp, 0             #  addi    $a0, $30, 0
+251    255    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+252    256    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $30)
+253    257    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+254    258    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+255    259    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+256    260    [0x23e40000]    addi   $a0, $ra, 0             #  addi    $a0, $31, 0
+257    261    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+258    262    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $31)
+259    263    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+260    264    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+261    265    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+262    267    [0x224c9df1]    addi   $t4, $s2, -25103        #  addi    $12, $18, -25103
+263    268    [0x3c031d44]    lui    $v1, 7492               #  lui     $3, 7492
+264    269    [0x215ea904]    addi   $fp, $t2, -22268        #  addi    $30, $10, -22268
+265    270    [0x2084f86c]    addi   $a0, $a0, -1940         #  addi    $4, $4, -1940
+266    271    [0x35e71459]    ori    $a3, $t7, 5209          #  ori     $7, $15, 5209
+267    272    [0x3c0521fb]    lui    $a1, 8699               #  lui     $5, 8699
+268    273    [0x368d4aa4]    ori    $t5, $s4, 19108         #  ori     $13, $20, 19108
+269    274    [0x23b3a524]    addi   $s3, $sp, -23260        #  addi    $19, $29, -23260
+270    275    [0x20dded22]    addi   $sp, $a2, -4830         #  addi    $29, $6, -4830
+271    276    [0x3c1032b1]    lui    $s0, 12977              #  lui     $16, 12977
+272    277    [0x22ef6059]    addi   $t7, $s7, 24665         #  addi    $15, $23, 24665
+273    278    [0x3c130401]    lui    $s3, 1025               #  lui     $19, 1025
+274    279    [0x3c130001]    lui    $s3, 1                  #  lui     $19, 1
+275    280    [0x20f0cf96]    addi   $s0, $a3, -12394        #  addi    $16, $7, -12394
+276    281    [0x35b2683d]    ori    $s2, $t5, 26685         #  ori     $18, $13, 26685
+277    282    [0x3c100092]    lui    $s0, 146                #  lui     $16, 146
+278    283    [0x23659692]    addi   $a1, $k1, -26990        #  addi    $5, $27, -26990
+279    284    [0x2115061f]    addi   $s5, $t0, 1567          #  addi    $21, $8, 1567
+280    285    [0x237cb947]    addi   $gp, $k1, -18105        #  addi    $28, $27, -18105
+281    286    [0x2049cbd2]    addi   $t1, $v0, -13358        #  addi    $9, $2, -13358
+282    287    [0x3448146d]    ori    $t0, $v0, 5229          #  ori     $8, $2, 5229
+283    288    [0x35ed3515]    ori    $t5, $t7, 13589         #  ori     $13, $15, 13589
+284    289    [0x3c1a7ffd]    lui    $k0, 32765              #  lui     $26, 32765
+285    290    [0x214f002a]    addi   $t7, $t2, 42            #  addi    $15, $10, 42
+286    291    [0x203a2a14]    addi   $k0, $at, 10772         #  addi    $26, $1, 10772
+287    292    [0x362f3758]    ori    $t7, $s1, 14168         #  ori     $15, $17, 14168
+288    293    [0x37c26bac]    ori    $v0, $fp, 27564         #  ori     $2, $30, 27564
+289    294    [0x35d362e1]    ori    $s3, $t6, 25313         #  ori     $19, $14, 25313
+290    295    [0x36350ee9]    ori    $s5, $s1, 3817          #  ori     $21, $17, 3817
+291    296    [0x36b90001]    ori    $t9, $s5, 1             #  ori     $25, $21, 1
+292    297    [0x360b5e7f]    ori    $t3, $s0, 24191         #  ori     $11, $16, 24191
+293    298    [0x37743b35]    ori    $s4, $k1, 15157         #  ori     $20, $27, 15157
+294    299    [0x360c5f42]    ori    $t4, $s0, 24386         #  ori     $12, $16, 24386
+295    300    [0x22ec290f]    addi   $t4, $s7, 10511         #  addi    $12, $23, 10511
+296    301    [0x3c143fce]    lui    $s4, 16334              #  lui     $20, 16334
+297    302    [0x3c135118]    lui    $s3, 20760              #  lui     $19, 20760
+298    303    [0x36596238]    ori    $t9, $s2, 25144         #  ori     $25, $18, 25144
+299    304    [0x35781a16]    ori    $t8, $t3, 6678          #  ori     $24, $11, 6678
+300    305    [0x36605c1a]    ori    $zero, $s3, 23578       #  ori     $0, $19, 23578
+301    306    [0x3c146262]    lui    $s4, 25186              #  lui     $20, 25186
+302    307    [0x3c0d56e1]    lui    $t5, 22241              #  lui     $13, 22241
+303    308    [0x3c052b9d]    lui    $a1, 11165              #  lui     $5, 11165
+304    309    [0x226fe5f4]    addi   $t7, $s3, -6668         #  addi    $15, $19, -6668
+305    310    [0x20417345]    addi   $at, $v0, 29509         #  addi    $1, $2, 29509
+306    311    [0x3c04638d]    lui    $a0, 25485              #  lui     $4, 25485
+307    312    [0x3c187ceb]    lui    $t8, 31979              #  lui     $24, 31979
+308    313    [0x20c0f00b]    addi   $zero, $a2, -4085       #  addi    $0, $6, -4085
+309    314    [0x207dbe22]    addi   $sp, $v1, -16862        #  addi    $29, $3, -16862
+310    315    [0x37a82274]    ori    $t0, $sp, 8820          #  ori     $8, $29, 8820
+311    316    [0x379b7308]    ori    $k1, $gp, 29448         #  ori     $27, $28, 29448
+312    318    [0x20040000]    addi   $a0, $zero, 0           #  addi    $a0, $0, 0
+313    319    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+314    320    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $0)
+315    321    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+316    322    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+317    323    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+318    324    [0x20240000]    addi   $a0, $at, 0             #  addi    $a0, $1, 0
+319    325    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+320    326    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $1)
+321    327    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+322    328    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+323    329    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+324    330    [0x20640000]    addi   $a0, $v1, 0             #  addi    $a0, $3, 0
+325    331    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+326    332    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $3)
+327    333    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+328    334    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+329    335    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+330    336    [0x20a40000]    addi   $a0, $a1, 0             #  addi    $a0, $5, 0
+331    337    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+332    338    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $5)
+333    339    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+334    340    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+335    341    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+336    342    [0x20c40000]    addi   $a0, $a2, 0             #  addi    $a0, $6, 0
+337    343    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+338    344    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $6)
+339    345    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+340    346    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+341    347    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+342    348    [0x20e40000]    addi   $a0, $a3, 0             #  addi    $a0, $7, 0
+343    349    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+344    350    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $7)
+345    351    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+346    352    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+347    353    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+348    354    [0x21040000]    addi   $a0, $t0, 0             #  addi    $a0, $8, 0
+349    355    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+350    356    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $8)
+351    357    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+352    358    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+353    359    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+354    360    [0x21240000]    addi   $a0, $t1, 0             #  addi    $a0, $9, 0
+355    361    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+356    362    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $9)
+357    363    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+358    364    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+359    365    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+360    366    [0x21440000]    addi   $a0, $t2, 0             #  addi    $a0, $10, 0
+361    367    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+362    368    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $10)
+363    369    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+364    370    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+365    371    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+366    372    [0x21640000]    addi   $a0, $t3, 0             #  addi    $a0, $11, 0
+367    373    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+368    374    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $11)
+369    375    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+370    376    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+371    377    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+372    378    [0x21840000]    addi   $a0, $t4, 0             #  addi    $a0, $12, 0
+373    379    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+374    380    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $12)
+375    381    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+376    382    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+377    383    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+378    384    [0x21a40000]    addi   $a0, $t5, 0             #  addi    $a0, $13, 0
+379    385    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+380    386    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $13)
+381    387    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+382    388    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+383    389    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+384    390    [0x21c40000]    addi   $a0, $t6, 0             #  addi    $a0, $14, 0
+385    391    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+386    392    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $14)
+387    393    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+388    394    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+389    395    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+390    396    [0x21e40000]    addi   $a0, $t7, 0             #  addi    $a0, $15, 0
+391    397    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+392    398    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $15)
+393    399    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+394    400    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+395    401    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+396    402    [0x22040000]    addi   $a0, $s0, 0             #  addi    $a0, $16, 0
+397    403    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+398    404    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $16)
+399    405    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+400    406    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+401    407    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+402    408    [0x22240000]    addi   $a0, $s1, 0             #  addi    $a0, $17, 0
+403    409    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+404    410    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $17)
+405    411    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+406    412    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+407    413    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+408    414    [0x22440000]    addi   $a0, $s2, 0             #  addi    $a0, $18, 0
+409    415    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+410    416    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $18)
+411    417    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+412    418    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+413    419    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+414    420    [0x22640000]    addi   $a0, $s3, 0             #  addi    $a0, $19, 0
+415    421    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+416    422    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $19)
+417    423    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+418    424    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+419    425    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+420    426    [0x22840000]    addi   $a0, $s4, 0             #  addi    $a0, $20, 0
+421    427    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+422    428    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $20)
+423    429    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+424    430    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+425    431    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+426    432    [0x22a40000]    addi   $a0, $s5, 0             #  addi    $a0, $21, 0
+427    433    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+428    434    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $21)
+429    435    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+430    436    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+431    437    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+432    438    [0x22c40000]    addi   $a0, $s6, 0             #  addi    $a0, $22, 0
+433    439    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+434    440    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $22)
+435    441    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+436    442    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+437    443    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+438    444    [0x22e40000]    addi   $a0, $s7, 0             #  addi    $a0, $23, 0
+439    445    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+440    446    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $23)
+441    447    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+442    448    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+443    449    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+444    450    [0x23040000]    addi   $a0, $t8, 0             #  addi    $a0, $24, 0
+445    451    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+446    452    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $24)
+447    453    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+448    454    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+449    455    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+450    456    [0x23240000]    addi   $a0, $t9, 0             #  addi    $a0, $25, 0
+451    457    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+452    458    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $25)
+453    459    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+454    460    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+455    461    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+456    462    [0x23440000]    addi   $a0, $k0, 0             #  addi    $a0, $26, 0
+457    463    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+458    464    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $26)
+459    465    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+460    466    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+461    467    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+462    468    [0x23640000]    addi   $a0, $k1, 0             #  addi    $a0, $27, 0
+463    469    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+464    470    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $27)
+465    471    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+466    472    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+467    473    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+468    474    [0x23840000]    addi   $a0, $gp, 0             #  addi    $a0, $28, 0
+469    475    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+470    476    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $28)
+471    477    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+472    478    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+473    479    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+474    480    [0x23a40000]    addi   $a0, $sp, 0             #  addi    $a0, $29, 0
+475    481    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+476    482    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $29)
+477    483    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+478    484    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+479    485    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+480    486    [0x23c40000]    addi   $a0, $fp, 0             #  addi    $a0, $30, 0
+481    487    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+482    488    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $30)
+483    489    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+484    490    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+485    491    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+486    492    [0x23e40000]    addi   $a0, $ra, 0             #  addi    $a0, $31, 0
+487    493    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+488    494    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $31)
+489    495    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+490    496    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+491    497    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+492    499    [0x35f00dfb]    ori    $s0, $t7, 3579          #  ori     $16, $15, 3579
+493    500    [0x3c1f0c98]    lui    $ra, 3224               #  lui     $31, 3224
+494    501    [0x36442bf4]    ori    $a0, $s2, 11252         #  ori     $4, $18, 11252
+495    502    [0x3505441d]    ori    $a1, $t0, 17437         #  ori     $5, $8, 17437
+496    503    [0x3c0920e2]    lui    $t1, 8418               #  lui     $9, 8418
+497    504    [0x36ba54e0]    ori    $k0, $s5, 21728         #  ori     $26, $21, 21728
+498    505    [0x234d8a00]    addi   $t5, $k0, -30208        #  addi    $13, $26, -30208
+499    506    [0x3c183419]    lui    $t8, 13337              #  lui     $24, 13337
+500    507    [0x375870ea]    ori    $t8, $k0, 28906         #  ori     $24, $26, 28906
+501    508    [0x362e0edc]    ori    $t6, $s1, 3804          #  ori     $14, $17, 3804
+502    509    [0x37356f4d]    ori    $s5, $t9, 28493         #  ori     $21, $25, 28493
+503    510    [0x23218de0]    addi   $at, $t9, -29216        #  addi    $1, $25, -29216
+504    511    [0x211bdd0b]    addi   $k1, $t0, -8949         #  addi    $27, $8, -8949
+505    512    [0x231068ce]    addi   $s0, $t8, 26830         #  addi    $16, $24, 26830
+506    513    [0x371557d7]    ori    $s5, $t8, 22487         #  ori     $21, $24, 22487
+507    514    [0x37c51aaa]    ori    $a1, $fp, 6826          #  ori     $5, $30, 6826
+508    515    [0x348e149c]    ori    $t6, $a0, 5276          #  ori     $14, $4, 5276
+509    516    [0x218fce05]    addi   $t7, $t4, -12795        #  addi    $15, $12, -12795
+510    517    [0x23c8ef99]    addi   $t0, $fp, -4199         #  addi    $8, $30, -4199
+511    518    [0x36f03aa4]    ori    $s0, $s7, 15012         #  ori     $16, $23, 15012
+512    519    [0x20d31fb8]    addi   $s3, $a2, 8120          #  addi    $19, $6, 8120
+513    520    [0x3c18658b]    lui    $t8, 25995              #  lui     $24, 25995
+514    521    [0x20cf1a69]    addi   $t7, $a2, 6761          #  addi    $15, $6, 6761
+515    522    [0x3c071507]    lui    $a3, 5383               #  lui     $7, 5383
+516    523    [0x36fb2eb5]    ori    $k1, $s7, 11957         #  ori     $27, $23, 11957
+517    524    [0x23fa3970]    addi   $k0, $ra, 14704         #  addi    $26, $31, 14704
+518    525    [0x3c1d5ef8]    lui    $sp, 24312              #  lui     $29, 24312
+519    526    [0x23d1096b]    addi   $s1, $fp, 2411          #  addi    $17, $30, 2411
+520    527    [0x34af66cf]    ori    $t7, $a1, 26319         #  ori     $15, $5, 26319
+521    528    [0x231d7d15]    addi   $sp, $t8, 32021         #  addi    $29, $24, 32021
+522    529    [0x37eb0446]    ori    $t3, $ra, 1094          #  ori     $11, $31, 1094
+523    530    [0x363161d2]    ori    $s1, $s1, 25042         #  ori     $17, $17, 25042
+524    531    [0x234ffb0b]    addi   $t7, $k0, -1269         #  addi    $15, $26, -1269
+525    532    [0x3c1e7b4c]    lui    $fp, 31564              #  lui     $30, 31564
+526    533    [0x34a14f0d]    ori    $at, $a1, 20237         #  ori     $1, $5, 20237
+527    534    [0x3c0f3cf0]    lui    $t7, 15600              #  lui     $15, 15600
+528    535    [0x37760002]    ori    $s6, $k1, 2             #  ori     $22, $27, 2
+529    536    [0x37b600b7]    ori    $s6, $sp, 183           #  ori     $22, $29, 183
+530    537    [0x2187decb]    addi   $a3, $t4, -8501         #  addi    $7, $12, -8501
+531    538    [0x23cd10e5]    addi   $t5, $fp, 4325          #  addi    $13, $30, 4325
+532    539    [0x224cdbdf]    addi   $t4, $s2, -9249         #  addi    $12, $18, -9249
+533    540    [0x35001bea]    ori    $zero, $t0, 7146        #  ori     $0, $8, 7146
+534    541    [0x3c1240a7]    lui    $s2, 16551              #  lui     $18, 16551
+535    542    [0x3c1f0647]    lui    $ra, 1607               #  lui     $31, 1607
+536    543    [0x3c126185]    lui    $s2, 24965              #  lui     $18, 24965
+537    544    [0x346b7498]    ori    $t3, $v1, 29848         #  ori     $11, $3, 29848
+538    545    [0x23249b72]    addi   $a0, $t9, -25742        #  addi    $4, $25, -25742
+539    546    [0x2269ff12]    addi   $t1, $s3, -238          #  addi    $9, $19, -238
+540    547    [0x21da42c0]    addi   $k0, $t6, 17088         #  addi    $26, $14, 17088
+541    548    [0x367c5b8f]    ori    $gp, $s3, 23439         #  ori     $28, $19, 23439
+542    550    [0x20040000]    addi   $a0, $zero, 0           #  addi    $a0, $0, 0
+543    551    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+544    552    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $0)
+545    553    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+546    554    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+547    555    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+548    556    [0x20240000]    addi   $a0, $at, 0             #  addi    $a0, $1, 0
+549    557    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+550    558    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $1)
+551    559    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+552    560    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+553    561    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+554    562    [0x20640000]    addi   $a0, $v1, 0             #  addi    $a0, $3, 0
+555    563    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+556    564    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $3)
+557    565    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+558    566    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+559    567    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+560    568    [0x20a40000]    addi   $a0, $a1, 0             #  addi    $a0, $5, 0
+561    569    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+562    570    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $5)
+563    571    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+564    572    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+565    573    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+566    574    [0x20c40000]    addi   $a0, $a2, 0             #  addi    $a0, $6, 0
+567    575    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+568    576    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $6)
+569    577    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+570    578    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+571    579    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+572    580    [0x20e40000]    addi   $a0, $a3, 0             #  addi    $a0, $7, 0
+573    581    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+574    582    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $7)
+575    583    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+576    584    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+577    585    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+578    586    [0x21040000]    addi   $a0, $t0, 0             #  addi    $a0, $8, 0
+579    587    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+580    588    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $8)
+581    589    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+582    590    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+583    591    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+584    592    [0x21240000]    addi   $a0, $t1, 0             #  addi    $a0, $9, 0
+585    593    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+586    594    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $9)
+587    595    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+588    596    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+589    597    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+590    598    [0x21440000]    addi   $a0, $t2, 0             #  addi    $a0, $10, 0
+591    599    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+592    600    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $10)
+593    601    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+594    602    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+595    603    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+596    604    [0x21640000]    addi   $a0, $t3, 0             #  addi    $a0, $11, 0
+597    605    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+598    606    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $11)
+599    607    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+600    608    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+601    609    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+602    610    [0x21840000]    addi   $a0, $t4, 0             #  addi    $a0, $12, 0
+603    611    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+604    612    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $12)
+605    613    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+606    614    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+607    615    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+608    616    [0x21a40000]    addi   $a0, $t5, 0             #  addi    $a0, $13, 0
+609    617    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+610    618    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $13)
+611    619    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+612    620    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+613    621    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+614    622    [0x21c40000]    addi   $a0, $t6, 0             #  addi    $a0, $14, 0
+615    623    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+616    624    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $14)
+617    625    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+618    626    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+619    627    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+620    628    [0x21e40000]    addi   $a0, $t7, 0             #  addi    $a0, $15, 0
+621    629    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+622    630    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $15)
+623    631    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+624    632    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+625    633    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+626    634    [0x22040000]    addi   $a0, $s0, 0             #  addi    $a0, $16, 0
+627    635    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+628    636    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $16)
+629    637    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+630    638    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+631    639    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+632    640    [0x22240000]    addi   $a0, $s1, 0             #  addi    $a0, $17, 0
+633    641    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+634    642    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $17)
+635    643    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+636    644    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+637    645    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+638    646    [0x22440000]    addi   $a0, $s2, 0             #  addi    $a0, $18, 0
+639    647    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+640    648    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $18)
+641    649    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+642    650    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+643    651    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+644    652    [0x22640000]    addi   $a0, $s3, 0             #  addi    $a0, $19, 0
+645    653    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+646    654    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $19)
+647    655    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+648    656    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+649    657    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+650    658    [0x22840000]    addi   $a0, $s4, 0             #  addi    $a0, $20, 0
+651    659    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+652    660    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $20)
+653    661    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+654    662    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+655    663    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+656    664    [0x22a40000]    addi   $a0, $s5, 0             #  addi    $a0, $21, 0
+657    665    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+658    666    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $21)
+659    667    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+660    668    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+661    669    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+662    670    [0x22c40000]    addi   $a0, $s6, 0             #  addi    $a0, $22, 0
+663    671    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+664    672    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $22)
+665    673    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+666    674    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+667    675    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+668    676    [0x22e40000]    addi   $a0, $s7, 0             #  addi    $a0, $23, 0
+669    677    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+670    678    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $23)
+671    679    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+672    680    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+673    681    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+674    682    [0x23040000]    addi   $a0, $t8, 0             #  addi    $a0, $24, 0
+675    683    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+676    684    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $24)
+677    685    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+678    686    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+679    687    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+680    688    [0x23240000]    addi   $a0, $t9, 0             #  addi    $a0, $25, 0
+681    689    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+682    690    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $25)
+683    691    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+684    692    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+685    693    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+686    694    [0x23440000]    addi   $a0, $k0, 0             #  addi    $a0, $26, 0
+687    695    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+688    696    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $26)
+689    697    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+690    698    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+691    699    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+692    700    [0x23640000]    addi   $a0, $k1, 0             #  addi    $a0, $27, 0
+693    701    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+694    702    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $27)
+695    703    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+696    704    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+697    705    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+698    706    [0x23840000]    addi   $a0, $gp, 0             #  addi    $a0, $28, 0
+699    707    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+700    708    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $28)
+701    709    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+702    710    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+703    711    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+704    712    [0x23a40000]    addi   $a0, $sp, 0             #  addi    $a0, $29, 0
+705    713    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+706    714    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $29)
+707    715    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+708    716    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+709    717    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+710    718    [0x23c40000]    addi   $a0, $fp, 0             #  addi    $a0, $30, 0
+711    719    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+712    720    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $30)
+713    721    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+714    722    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+715    723    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+716    724    [0x23e40000]    addi   $a0, $ra, 0             #  addi    $a0, $31, 0
+717    725    [0x20020001]    addi   $v0, $zero, 1           #  addi    $v0, $zero, 1
+718    726    [0x0000000c]    syscall                        #  syscall                 # printf("%d", $31)
+719    727    [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+720    728    [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+721    729    [0x0000000c]    syscall                        #  syscall                 # putchar('\n')
+722    731    [0x2002000a]    addi   $v0, $zero, 10          #  addi    $v0, $zero, 10
+723    732    [0x0000000c]    syscall                        #  syscall                 # exit(0)
+
+Data segment size: 0 bytes

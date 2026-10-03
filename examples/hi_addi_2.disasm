@@ -1,0 +1,26 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+0      7      [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+1      8      [0x20040078]    addi   $a0, $zero, 120         #  addi    $a0, $zero, 'x'
+2      9      [0x0000000c]    syscall                        #  syscall
+
+main:
+3      13     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+4      14     [0x20040068]    addi   $a0, $zero, 104         #  addi    $a0, $zero, 'h'
+5      15     [0x0000000c]    syscall                        #  syscall
+6      18     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+7      19     [0x20040065]    addi   $a0, $zero, 101         #  addi    $a0, $zero, 'e'
+8      20     [0x0000000c]    syscall                        #  syscall
+9      23     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+10     24     [0x20040079]    addi   $a0, $zero, 121         #  addi    $a0, $zero, 'y'
+11     25     [0x0000000c]    syscall                        #  syscall
+12     28     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+13     29     [0x2004000a]    addi   $a0, $zero, 10          #  addi    $a0, $zero, '\n'
+14     30     [0x0000000c]    syscall                        #  syscall
+15     33     [0x2002000a]    addi   $v0, $zero, 10          #  addi    $v0, $zero, 10
+16     34     [0x0000000c]    syscall                        #  syscall
+17     38     [0x2002000b]    addi   $v0, $zero, 11          #  addi    $v0, $zero, 11
+18     39     [0x2004007a]    addi   $a0, $zero, 122         #  addi    $a0, $zero, 'z'
+19     40     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

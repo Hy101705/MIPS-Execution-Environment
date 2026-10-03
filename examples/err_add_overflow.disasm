@@ -1,0 +1,11 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x3c088000]    lui    $t0, 32768              #  li      $t0, -2147483645
+1             [0x35080003]    ori    $t0, $t0, 3
+2      3      [0x2009ff9c]    addi   $t1, $zero, -100        #  li      $t1, -100
+3      4      [0x01095020]    add    $t2, $t0, $t1           #  add     $t2, $t0, $t1
+4      6      [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+5      7      [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

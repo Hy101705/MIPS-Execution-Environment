@@ -1,0 +1,16 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      4      [0x2008002a]    addi   $t0, $zero, 42          #  li      $t0, 42                 #
+1      5      [0x3c011001]    lui    $at, 4097               #  sw      $t0, g                  # g = 42;
+2             [0x3421001c]    ori    $at, $at, 28
+3             [0xac280000]    sw     $t0, ($at)
+4      7      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+5      8      [0x3c081001]    lui    $t0, 4097               #  la      $t0, g                  #
+6             [0x3508001c]    ori    $t0, $t0, 28
+7      9      [0x8d040000]    lw     $a0, ($t0)              #  lw      $a0, 0($t0)             #
+8      10     [0x0000000c]    syscall                        #  syscall                         # printf("%d", g);
+9      12     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+10     13     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 32 bytes

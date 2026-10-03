@@ -1,0 +1,999 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      4      [0x20020078]    addi   $v0, $zero, 120         #  li      $v0, 120
+1      5      [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 0
+2             [0x342101c9]    ori    $at, $at, 457
+3             [0xa0220000]    sb     $v0, ($at)
+4      6      [0x20020079]    addi   $v0, $zero, 121         #  li      $v0, 121
+5      7      [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 1
+6             [0x342101ca]    ori    $at, $at, 458
+7             [0xa0220000]    sb     $v0, ($at)
+8      8      [0x2002007a]    addi   $v0, $zero, 122         #  li      $v0, 122
+9      9      [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 2
+10            [0x342101cb]    ori    $at, $at, 459
+11            [0xa0220000]    sb     $v0, ($at)
+12     10     [0x2002005f]    addi   $v0, $zero, 95          #  li      $v0, 95
+13     11     [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 3
+14            [0x342101cc]    ori    $at, $at, 460
+15            [0xa0220000]    sb     $v0, ($at)
+16     12     [0x20020041]    addi   $v0, $zero, 65          #  li      $v0, 65
+17     13     [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 4
+18            [0x342101cd]    ori    $at, $at, 461
+19            [0xa0220000]    sb     $v0, ($at)
+20     14     [0x20020042]    addi   $v0, $zero, 66          #  li      $v0, 66
+21     15     [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 5
+22            [0x342101ce]    ori    $at, $at, 462
+23            [0xa0220000]    sb     $v0, ($at)
+24     16     [0x20020043]    addi   $v0, $zero, 67          #  li      $v0, 67
+25     17     [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 6
+26            [0x342101cf]    ori    $at, $at, 463
+27            [0xa0220000]    sb     $v0, ($at)
+28     21     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+29     22     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_1
+30            [0x3484000b]    ori    $a0, $a0, 11
+31     23     [0x0000000c]    syscall                        #  syscall
+32     24     [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+33     25     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_0
+34            [0x34840000]    ori    $a0, $a0, 0
+35     26     [0x20050001]    addi   $a1, $zero, 1           #  li      $a1, 1
+36     27     [0x0000000c]    syscall                        #  syscall
+37     28     [0x00028021]    addu   $s0, $zero, $v0         #  move    $s0, $v0
+38     30     [0x00102021]    addu   $a0, $zero, $s0         #  move    $a0, $s0
+39     31     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+40     32     [0x0000000c]    syscall                        #  syscall
+41     34     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+42     35     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+43            [0x34840026]    ori    $a0, $a0, 38
+44     36     [0x0000000c]    syscall                        #  syscall
+45     38     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+46     39     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_3
+47            [0x34840028]    ori    $a0, $a0, 40
+48     40     [0x0000000c]    syscall                        #  syscall
+49     41     [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_0:
+50     43     [0x34010007]    ori    $at, $zero, 7           #  bge     $t0, 7, label_1
+51            [0x0101082a]    slt    $at, $t0, $at
+52            [0x10200009]    beq    $at, $zero, label_1
+53     44     [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_1($t0)
+54            [0x342101c9]    ori    $at, $at, 457
+55            [0x00280821]    addu   $at, $at, $t0
+56            [0x80240000]    lb     $a0, ($at)
+57     45     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+58     46     [0x0000000c]    syscall                        #  syscall
+59     47     [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+60     48     [0x1000fff6]    beq    $zero, $zero, label_0   #  b       label_0
+
+label_1:
+61     51     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+62     52     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+63            [0x34840026]    ori    $a0, $a0, 38
+64     53     [0x0000000c]    syscall                        #  syscall
+65     56     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+66     57     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+67            [0x34840030]    ori    $a0, $a0, 48
+68     58     [0x0000000c]    syscall                        #  syscall
+69     59     [0x00102021]    addu   $a0, $zero, $s0         #  move    $a0, $s0
+70     60     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+71     61     [0x0000000c]    syscall                        #  syscall
+72     63     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+73     64     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_5
+74            [0x34840037]    ori    $a0, $a0, 55
+75     65     [0x0000000c]    syscall                        #  syscall
+76     66     [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+77     67     [0x00102021]    addu   $a0, $zero, $s0         #  move    $a0, $s0
+78     68     [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_1
+79            [0x34a501c9]    ori    $a1, $a1, 457
+80     69     [0x20060003]    addi   $a2, $zero, 3           #  li      $a2, 3
+81     70     [0x0000000c]    syscall                        #  syscall
+82     72     [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+83     73     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+84     74     [0x0000000c]    syscall                        #  syscall
+85     76     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+86     77     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+87            [0x34840026]    ori    $a0, $a0, 38
+88     78     [0x0000000c]    syscall                        #  syscall
+89     81     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+90     82     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+91            [0x34840030]    ori    $a0, $a0, 48
+92     83     [0x0000000c]    syscall                        #  syscall
+93     84     [0x00102021]    addu   $a0, $zero, $s0         #  move    $a0, $s0
+94     85     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+95     86     [0x0000000c]    syscall                        #  syscall
+96     88     [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+97     89     [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_6
+98            [0x34840048]    ori    $a0, $a0, 72
+99     90     [0x0000000c]    syscall                        #  syscall
+100    91     [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+101    92     [0x00102021]    addu   $a0, $zero, $s0         #  move    $a0, $s0
+102    93     [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_1 + 4
+103           [0x34a501cd]    ori    $a1, $a1, 461
+104    94     [0x20060003]    addi   $a2, $zero, 3           #  li      $a2, 3
+105    95     [0x0000000c]    syscall                        #  syscall
+106    97     [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+107    98     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+108    99     [0x0000000c]    syscall                        #  syscall
+109    101    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+110    102    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+111           [0x34840026]    ori    $a0, $a0, 38
+112    103    [0x0000000c]    syscall                        #  syscall
+113    107    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+114    108    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_1
+115           [0x3484000b]    ori    $a0, $a0, 11
+116    109    [0x0000000c]    syscall                        #  syscall
+117    110    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+118    111    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_0
+119           [0x34840000]    ori    $a0, $a0, 0
+120    112    [0x20050001]    addi   $a1, $zero, 1           #  li      $a1, 1
+121    113    [0x0000000c]    syscall                        #  syscall
+122    114    [0x00028821]    addu   $s1, $zero, $v0         #  move    $s1, $v0
+123    116    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+124    117    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+125    118    [0x0000000c]    syscall                        #  syscall
+126    120    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+127    121    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+128           [0x34840026]    ori    $a0, $a0, 38
+129    122    [0x0000000c]    syscall                        #  syscall
+130    126    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+131    127    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_7
+132           [0x3484005d]    ori    $a0, $a0, 93
+133    128    [0x0000000c]    syscall                        #  syscall
+134    129    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+135    130    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_0
+136           [0x34840000]    ori    $a0, $a0, 0
+137    131    [0x20050000]    addi   $a1, $zero, 0           #  li      $a1, 0
+138    132    [0x0000000c]    syscall                        #  syscall
+139    133    [0x00029021]    addu   $s2, $zero, $v0         #  move    $s2, $v0
+140    135    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+141    136    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+142    137    [0x0000000c]    syscall                        #  syscall
+143    139    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+144    140    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+145           [0x34840026]    ori    $a0, $a0, 38
+146    141    [0x0000000c]    syscall                        #  syscall
+147    144    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+148    145    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+149           [0x34840078]    ori    $a0, $a0, 120
+150    146    [0x0000000c]    syscall                        #  syscall
+151    147    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+152    148    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+153    149    [0x0000000c]    syscall                        #  syscall
+154    151    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+155    152    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_9
+156           [0x3484007e]    ori    $a0, $a0, 126
+157    153    [0x0000000c]    syscall                        #  syscall
+158    154    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+159    155    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+160    156    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_2
+161           [0x34a501d3]    ori    $a1, $a1, 467
+162    157    [0x20060005]    addi   $a2, $zero, 5           #  li      $a2, 5
+163    158    [0x0000000c]    syscall                        #  syscall
+164    160    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+165    161    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+166    162    [0x0000000c]    syscall                        #  syscall
+167    164    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+168    165    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+169           [0x34840026]    ori    $a0, $a0, 38
+170    166    [0x0000000c]    syscall                        #  syscall
+171    169    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+172    170    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+173           [0x34840078]    ori    $a0, $a0, 120
+174    171    [0x0000000c]    syscall                        #  syscall
+175    172    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+176    173    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+177    174    [0x0000000c]    syscall                        #  syscall
+178    176    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+179    177    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_9
+180           [0x3484007e]    ori    $a0, $a0, 126
+181    178    [0x0000000c]    syscall                        #  syscall
+182    179    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+183    180    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+184    181    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_2
+185           [0x34a501d3]    ori    $a1, $a1, 467
+186    182    [0x20060005]    addi   $a2, $zero, 5           #  li      $a2, 5
+187    183    [0x0000000c]    syscall                        #  syscall
+188    185    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+189    186    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+190    187    [0x0000000c]    syscall                        #  syscall
+191    189    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+192    190    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+193           [0x34840026]    ori    $a0, $a0, 38
+194    191    [0x0000000c]    syscall                        #  syscall
+195    193    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+196    194    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_10
+197           [0x3484008f]    ori    $a0, $a0, 143
+198    195    [0x0000000c]    syscall                        #  syscall
+199    196    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_2:
+200    198    [0x34010007]    ori    $at, $zero, 7           #  bge     $t0, 7, label_3
+201           [0x0101082a]    slt    $at, $t0, $at
+202           [0x10200009]    beq    $at, $zero, label_3
+203    199    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_2($t0)
+204           [0x342101d3]    ori    $at, $at, 467
+205           [0x00280821]    addu   $at, $at, $t0
+206           [0x80240000]    lb     $a0, ($at)
+207    200    [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+208    201    [0x0000000c]    syscall                        #  syscall
+209    202    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+210    203    [0x1000fff6]    beq    $zero, $zero, label_2   #  b       label_2
+
+label_3:
+211    206    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+212    207    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+213           [0x34840026]    ori    $a0, $a0, 38
+214    208    [0x0000000c]    syscall                        #  syscall
+215    210    [0x20020058]    addi   $v0, $zero, 88          #  li      $v0, 88
+216    211    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 0
+217           [0x342101dd]    ori    $at, $at, 477
+218           [0xa0220000]    sb     $v0, ($at)
+219    212    [0x20020059]    addi   $v0, $zero, 89          #  li      $v0, 89
+220    213    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 1
+221           [0x342101de]    ori    $at, $at, 478
+222           [0xa0220000]    sb     $v0, ($at)
+223    214    [0x2002005a]    addi   $v0, $zero, 90          #  li      $v0, 90
+224    215    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 2
+225           [0x342101df]    ori    $at, $at, 479
+226           [0xa0220000]    sb     $v0, ($at)
+227    216    [0x2002005f]    addi   $v0, $zero, 95          #  li      $v0, 95
+228    217    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 3
+229           [0x342101e0]    ori    $at, $at, 480
+230           [0xa0220000]    sb     $v0, ($at)
+231    218    [0x20020061]    addi   $v0, $zero, 97          #  li      $v0, 97
+232    219    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 4
+233           [0x342101e1]    ori    $at, $at, 481
+234           [0xa0220000]    sb     $v0, ($at)
+235    220    [0x20020062]    addi   $v0, $zero, 98          #  li      $v0, 98
+236    221    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 5
+237           [0x342101e2]    ori    $at, $at, 482
+238           [0xa0220000]    sb     $v0, ($at)
+239    222    [0x20020063]    addi   $v0, $zero, 99          #  li      $v0, 99
+240    223    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_3 + 6
+241           [0x342101e3]    ori    $at, $at, 483
+242           [0xa0220000]    sb     $v0, ($at)
+243    225    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+244    226    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_11
+245           [0x34840097]    ori    $a0, $a0, 151
+246    227    [0x0000000c]    syscall                        #  syscall
+247    228    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_4:
+248    230    [0x34010007]    ori    $at, $zero, 7           #  bge     $t0, 7, label_5
+249           [0x0101082a]    slt    $at, $t0, $at
+250           [0x10200009]    beq    $at, $zero, label_5
+251    231    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_3($t0)
+252           [0x342101dd]    ori    $at, $at, 477
+253           [0x00280821]    addu   $at, $at, $t0
+254           [0x80240000]    lb     $a0, ($at)
+255    232    [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+256    233    [0x0000000c]    syscall                        #  syscall
+257    234    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+258    235    [0x1000fff6]    beq    $zero, $zero, label_4   #  b       label_4
+
+label_5:
+259    238    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+260    239    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+261           [0x34840026]    ori    $a0, $a0, 38
+262    240    [0x0000000c]    syscall                        #  syscall
+263    243    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+264    244    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+265           [0x34840030]    ori    $a0, $a0, 48
+266    245    [0x0000000c]    syscall                        #  syscall
+267    246    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+268    247    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+269    248    [0x0000000c]    syscall                        #  syscall
+270    250    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+271    251    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_12
+272           [0x3484009f]    ori    $a0, $a0, 159
+273    252    [0x0000000c]    syscall                        #  syscall
+274    253    [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+275    254    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+276    255    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_3
+277           [0x34a501dd]    ori    $a1, $a1, 477
+278    256    [0x20060007]    addi   $a2, $zero, 7           #  li      $a2, 7
+279    257    [0x0000000c]    syscall                        #  syscall
+280    259    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+281    260    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+282    261    [0x0000000c]    syscall                        #  syscall
+283    263    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+284    264    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+285           [0x34840026]    ori    $a0, $a0, 38
+286    265    [0x0000000c]    syscall                        #  syscall
+287    268    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+288    269    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+289           [0x34840078]    ori    $a0, $a0, 120
+290    270    [0x0000000c]    syscall                        #  syscall
+291    271    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+292    272    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+293    273    [0x0000000c]    syscall                        #  syscall
+294    275    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+295    276    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_9
+296           [0x3484007e]    ori    $a0, $a0, 126
+297    277    [0x0000000c]    syscall                        #  syscall
+298    278    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+299    279    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+300    280    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_2
+301           [0x34a501d3]    ori    $a1, $a1, 467
+302    281    [0x20060005]    addi   $a2, $zero, 5           #  li      $a2, 5
+303    282    [0x0000000c]    syscall                        #  syscall
+304    284    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+305    285    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+306    286    [0x0000000c]    syscall                        #  syscall
+307    288    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+308    289    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+309           [0x34840026]    ori    $a0, $a0, 38
+310    290    [0x0000000c]    syscall                        #  syscall
+311    292    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+312    293    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_10
+313           [0x3484008f]    ori    $a0, $a0, 143
+314    294    [0x0000000c]    syscall                        #  syscall
+315    295    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_6:
+316    297    [0x34010007]    ori    $at, $zero, 7           #  bge     $t0, 7, label_7
+317           [0x0101082a]    slt    $at, $t0, $at
+318           [0x10200009]    beq    $at, $zero, label_7
+319    298    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_2($t0)
+320           [0x342101d3]    ori    $at, $at, 467
+321           [0x00280821]    addu   $at, $at, $t0
+322           [0x80240000]    lb     $a0, ($at)
+323    299    [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+324    300    [0x0000000c]    syscall                        #  syscall
+325    301    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+326    302    [0x1000fff6]    beq    $zero, $zero, label_6   #  b       label_6
+
+label_7:
+327    305    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+328    306    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+329           [0x34840026]    ori    $a0, $a0, 38
+330    307    [0x0000000c]    syscall                        #  syscall
+331    310    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+332    311    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_13
+333           [0x348400b0]    ori    $a0, $a0, 176
+334    312    [0x0000000c]    syscall                        #  syscall
+335    313    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+336    314    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+337    315    [0x0000000c]    syscall                        #  syscall
+338    317    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+339    318    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_14
+340           [0x348400b7]    ori    $a0, $a0, 183
+341    319    [0x0000000c]    syscall                        #  syscall
+342    320    [0x20020010]    addi   $v0, $zero, 16          #  li      $v0, 16
+343    321    [0x00112021]    addu   $a0, $zero, $s1         #  move    $a0, $s1
+344    322    [0x0000000c]    syscall                        #  syscall
+345    324    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+346    325    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+347    326    [0x0000000c]    syscall                        #  syscall
+348    328    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+349    329    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+350           [0x34840026]    ori    $a0, $a0, 38
+351    330    [0x0000000c]    syscall                        #  syscall
+352    334    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+353    335    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_16
+354           [0x348400c7]    ori    $a0, $a0, 199
+355    336    [0x0000000c]    syscall                        #  syscall
+356    337    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+357    338    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_15
+358           [0x348400be]    ori    $a0, $a0, 190
+359    339    [0x20050000]    addi   $a1, $zero, 0           #  li      $a1, 0
+360    340    [0x0000000c]    syscall                        #  syscall
+361    341    [0x0002a821]    addu   $s5, $zero, $v0         #  move    $s5, $v0
+362    343    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+363    344    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+364    345    [0x0000000c]    syscall                        #  syscall
+365    347    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+366    348    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+367           [0x34840026]    ori    $a0, $a0, 38
+368    349    [0x0000000c]    syscall                        #  syscall
+369    353    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+370    354    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_17
+371           [0x348400e0]    ori    $a0, $a0, 224
+372    355    [0x0000000c]    syscall                        #  syscall
+373    356    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+374    357    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_15
+375           [0x348400be]    ori    $a0, $a0, 190
+376    358    [0x20050001]    addi   $a1, $zero, 1           #  li      $a1, 1
+377    359    [0x0000000c]    syscall                        #  syscall
+378    360    [0x0002a021]    addu   $s4, $zero, $v0         #  move    $s4, $v0
+379    362    [0x00142021]    addu   $a0, $zero, $s4         #  move    $a0, $s4
+380    363    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+381    364    [0x0000000c]    syscall                        #  syscall
+382    366    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+383    367    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+384           [0x34840026]    ori    $a0, $a0, 38
+385    368    [0x0000000c]    syscall                        #  syscall
+386    372    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+387    373    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_16
+388           [0x348400c7]    ori    $a0, $a0, 199
+389    374    [0x0000000c]    syscall                        #  syscall
+390    375    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+391    376    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_15
+392           [0x348400be]    ori    $a0, $a0, 190
+393    377    [0x20050000]    addi   $a1, $zero, 0           #  li      $a1, 0
+394    378    [0x0000000c]    syscall                        #  syscall
+395    379    [0x0002a821]    addu   $s5, $zero, $v0         #  move    $s5, $v0
+396    381    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+397    382    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+398    383    [0x0000000c]    syscall                        #  syscall
+399    385    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+400    386    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+401           [0x34840026]    ori    $a0, $a0, 38
+402    387    [0x0000000c]    syscall                        #  syscall
+403    390    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+404    391    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+405           [0x34840078]    ori    $a0, $a0, 120
+406    392    [0x0000000c]    syscall                        #  syscall
+407    393    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+408    394    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+409    395    [0x0000000c]    syscall                        #  syscall
+410    397    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+411    398    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_18
+412           [0x348400f9]    ori    $a0, $a0, 249
+413    399    [0x0000000c]    syscall                        #  syscall
+414    400    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+415    401    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+416    402    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+417           [0x34a501f1]    ori    $a1, $a1, 497
+418    403    [0x2006000a]    addi   $a2, $zero, 10          #  li      $a2, 10
+419    404    [0x0000000c]    syscall                        #  syscall
+420    406    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+421    407    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+422    408    [0x0000000c]    syscall                        #  syscall
+423    410    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+424    411    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+425           [0x34840026]    ori    $a0, $a0, 38
+426    412    [0x0000000c]    syscall                        #  syscall
+427    414    [0x20020000]    addi   $v0, $zero, 0           #  li      $v0, 0
+428    415    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 0
+429           [0x342101e7]    ori    $at, $at, 487
+430           [0xa0220000]    sb     $v0, ($at)
+431    416    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+432    417    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 1
+433           [0x342101e8]    ori    $at, $at, 488
+434           [0xa0220000]    sb     $v0, ($at)
+435    418    [0x20020018]    addi   $v0, $zero, 24          #  li      $v0, 24
+436    419    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 2
+437           [0x342101e9]    ori    $at, $at, 489
+438           [0xa0220000]    sb     $v0, ($at)
+439    420    [0x200200fe]    addi   $v0, $zero, 254         #  li      $v0, 254
+440    421    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 3
+441           [0x342101ea]    ori    $at, $at, 490
+442           [0xa0220000]    sb     $v0, ($at)
+443    422    [0x200200ff]    addi   $v0, $zero, 255         #  li      $v0, 255
+444    423    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 4
+445           [0x342101eb]    ori    $at, $at, 491
+446           [0xa0220000]    sb     $v0, ($at)
+447    424    [0x2002000c]    addi   $v0, $zero, 12          #  li      $v0, 12
+448    425    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_4 + 5
+449           [0x342101ec]    ori    $at, $at, 492
+450           [0xa0220000]    sb     $v0, ($at)
+451    427    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+452    428    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_19
+453           [0x3484010b]    ori    $a0, $a0, 267
+454    429    [0x0000000c]    syscall                        #  syscall
+455    430    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_8:
+456    432    [0x34010006]    ori    $at, $zero, 6           #  bge     $t0, 6, label_9
+457           [0x0101082a]    slt    $at, $t0, $at
+458           [0x1020000d]    beq    $at, $zero, label_9
+459    433    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_4($t0)
+460           [0x342101e7]    ori    $at, $at, 487
+461           [0x00280821]    addu   $at, $at, $t0
+462           [0x80240000]    lb     $a0, ($at)
+463    434    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+464    435    [0x0000000c]    syscall                        #  syscall
+465    437    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+466    438    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+467           [0x34840126]    ori    $a0, $a0, 294
+468    439    [0x0000000c]    syscall                        #  syscall
+469    440    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+470    441    [0x1000fff2]    beq    $zero, $zero, label_8   #  b       label_8
+
+label_9:
+471    444    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+472    445    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+473           [0x34840026]    ori    $a0, $a0, 38
+474    446    [0x0000000c]    syscall                        #  syscall
+475    449    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+476    450    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+477           [0x34840030]    ori    $a0, $a0, 48
+478    451    [0x0000000c]    syscall                        #  syscall
+479    452    [0x00142021]    addu   $a0, $zero, $s4         #  move    $a0, $s4
+480    453    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+481    454    [0x0000000c]    syscall                        #  syscall
+482    456    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+483    457    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_21
+484           [0x34840128]    ori    $a0, $a0, 296
+485    458    [0x0000000c]    syscall                        #  syscall
+486    459    [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+487    460    [0x00142021]    addu   $a0, $zero, $s4         #  move    $a0, $s4
+488    461    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_4
+489           [0x34a501e7]    ori    $a1, $a1, 487
+490    462    [0x20060006]    addi   $a2, $zero, 6           #  li      $a2, 6
+491    463    [0x0000000c]    syscall                        #  syscall
+492    465    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+493    466    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+494    467    [0x0000000c]    syscall                        #  syscall
+495    469    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+496    470    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+497           [0x34840026]    ori    $a0, $a0, 38
+498    471    [0x0000000c]    syscall                        #  syscall
+499    474    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+500    475    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+501           [0x34840078]    ori    $a0, $a0, 120
+502    476    [0x0000000c]    syscall                        #  syscall
+503    477    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+504    478    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+505    479    [0x0000000c]    syscall                        #  syscall
+506    481    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+507    482    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_22
+508           [0x34840139]    ori    $a0, $a0, 313
+509    483    [0x0000000c]    syscall                        #  syscall
+510    484    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+511    485    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+512    486    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+513           [0x34a501f1]    ori    $a1, $a1, 497
+514    487    [0x20060003]    addi   $a2, $zero, 3           #  li      $a2, 3
+515    488    [0x0000000c]    syscall                        #  syscall
+516    490    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+517    491    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+518    492    [0x0000000c]    syscall                        #  syscall
+519    494    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+520    495    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+521           [0x34840026]    ori    $a0, $a0, 38
+522    496    [0x0000000c]    syscall                        #  syscall
+523    498    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+524    499    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_23
+525           [0x3484014a]    ori    $a0, $a0, 330
+526    500    [0x0000000c]    syscall                        #  syscall
+527    501    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_10:
+528    503    [0x34010003]    ori    $at, $zero, 3           #  bge     $t0, 3, label_11
+529           [0x0101082a]    slt    $at, $t0, $at
+530           [0x1020000d]    beq    $at, $zero, label_11
+531    504    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_5($t0)
+532           [0x342101f1]    ori    $at, $at, 497
+533           [0x00280821]    addu   $at, $at, $t0
+534           [0x80240000]    lb     $a0, ($at)
+535    505    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+536    506    [0x0000000c]    syscall                        #  syscall
+537    508    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+538    509    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+539           [0x34840126]    ori    $a0, $a0, 294
+540    510    [0x0000000c]    syscall                        #  syscall
+541    511    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+542    512    [0x1000fff2]    beq    $zero, $zero, label_10  #  b       label_10
+
+label_11:
+543    515    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+544    516    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+545           [0x34840026]    ori    $a0, $a0, 38
+546    517    [0x0000000c]    syscall                        #  syscall
+547    520    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+548    521    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+549           [0x34840078]    ori    $a0, $a0, 120
+550    522    [0x0000000c]    syscall                        #  syscall
+551    523    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+552    524    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+553    525    [0x0000000c]    syscall                        #  syscall
+554    527    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+555    528    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_24
+556           [0x34840165]    ori    $a0, $a0, 357
+557    529    [0x0000000c]    syscall                        #  syscall
+558    530    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+559    531    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+560    532    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+561           [0x34a501f1]    ori    $a1, $a1, 497
+562    533    [0x20060002]    addi   $a2, $zero, 2           #  li      $a2, 2
+563    534    [0x0000000c]    syscall                        #  syscall
+564    536    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+565    537    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+566    538    [0x0000000c]    syscall                        #  syscall
+567    540    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+568    541    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+569           [0x34840026]    ori    $a0, $a0, 38
+570    542    [0x0000000c]    syscall                        #  syscall
+571    544    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+572    545    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_23
+573           [0x3484014a]    ori    $a0, $a0, 330
+574    546    [0x0000000c]    syscall                        #  syscall
+575    547    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_12:
+576    549    [0x34010003]    ori    $at, $zero, 3           #  bge     $t0, 3, label_13
+577           [0x0101082a]    slt    $at, $t0, $at
+578           [0x1020000d]    beq    $at, $zero, label_13
+579    550    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_5($t0)
+580           [0x342101f1]    ori    $at, $at, 497
+581           [0x00280821]    addu   $at, $at, $t0
+582           [0x80240000]    lb     $a0, ($at)
+583    551    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+584    552    [0x0000000c]    syscall                        #  syscall
+585    554    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+586    555    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+587           [0x34840126]    ori    $a0, $a0, 294
+588    556    [0x0000000c]    syscall                        #  syscall
+589    557    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+590    558    [0x1000fff2]    beq    $zero, $zero, label_12  #  b       label_12
+
+label_13:
+591    561    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+592    562    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+593           [0x34840026]    ori    $a0, $a0, 38
+594    563    [0x0000000c]    syscall                        #  syscall
+595    567    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+596    568    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_17
+597           [0x348400e0]    ori    $a0, $a0, 224
+598    569    [0x0000000c]    syscall                        #  syscall
+599    570    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+600    571    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_15
+601           [0x348400be]    ori    $a0, $a0, 190
+602    572    [0x20050001]    addi   $a1, $zero, 1           #  li      $a1, 1
+603    573    [0x0000000c]    syscall                        #  syscall
+604    574    [0x0002b021]    addu   $s6, $zero, $v0         #  move    $s6, $v0
+605    576    [0x00162021]    addu   $a0, $zero, $s6         #  move    $a0, $s6
+606    577    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+607    578    [0x0000000c]    syscall                        #  syscall
+608    580    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+609    581    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+610           [0x34840026]    ori    $a0, $a0, 38
+611    582    [0x0000000c]    syscall                        #  syscall
+612    584    [0x2002002a]    addi   $v0, $zero, 42          #  li      $v0, 42
+613    585    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 0
+614           [0x342101c9]    ori    $at, $at, 457
+615           [0xa0220000]    sb     $v0, ($at)
+616    586    [0x2002002b]    addi   $v0, $zero, 43          #  li      $v0, 43
+617    587    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 1
+618           [0x342101ca]    ori    $at, $at, 458
+619           [0xa0220000]    sb     $v0, ($at)
+620    588    [0x2002002c]    addi   $v0, $zero, 44          #  li      $v0, 44
+621    589    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 2
+622           [0x342101cb]    ori    $at, $at, 459
+623           [0xa0220000]    sb     $v0, ($at)
+624    590    [0x2002002d]    addi   $v0, $zero, 45          #  li      $v0, 45
+625    591    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 3
+626           [0x342101cc]    ori    $at, $at, 460
+627           [0xa0220000]    sb     $v0, ($at)
+628    592    [0x2002002e]    addi   $v0, $zero, 46          #  li      $v0, 46
+629    593    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 4
+630           [0x342101cd]    ori    $at, $at, 461
+631           [0xa0220000]    sb     $v0, ($at)
+632    594    [0x2002002f]    addi   $v0, $zero, 47          #  li      $v0, 47
+633    595    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 5
+634           [0x342101ce]    ori    $at, $at, 462
+635           [0xa0220000]    sb     $v0, ($at)
+636    596    [0x20020030]    addi   $v0, $zero, 48          #  li      $v0, 48
+637    597    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 6
+638           [0x342101cf]    ori    $at, $at, 463
+639           [0xa0220000]    sb     $v0, ($at)
+640    598    [0x20020031]    addi   $v0, $zero, 49          #  li      $v0, 49
+641    599    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 7
+642           [0x342101d0]    ori    $at, $at, 464
+643           [0xa0220000]    sb     $v0, ($at)
+644    600    [0x20020032]    addi   $v0, $zero, 50          #  li      $v0, 50
+645    601    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 8
+646           [0x342101d1]    ori    $at, $at, 465
+647           [0xa0220000]    sb     $v0, ($at)
+648    602    [0x20020033]    addi   $v0, $zero, 51          #  li      $v0, 51
+649    603    [0x3c011001]    lui    $at, 4097               #  sb      $v0, buf_1 + 9
+650           [0x342101d2]    ori    $at, $at, 466
+651           [0xa0220000]    sb     $v0, ($at)
+652    605    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+653    606    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_25
+654           [0x34840176]    ori    $a0, $a0, 374
+655    607    [0x0000000c]    syscall                        #  syscall
+656    608    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_14:
+657    610    [0x3401000a]    ori    $at, $zero, 10          #  bge     $t0, 10, label_15
+658           [0x0101082a]    slt    $at, $t0, $at
+659           [0x1020000d]    beq    $at, $zero, label_15
+660    611    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_1($t0)
+661           [0x342101c9]    ori    $at, $at, 457
+662           [0x00280821]    addu   $at, $at, $t0
+663           [0x80240000]    lb     $a0, ($at)
+664    612    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+665    613    [0x0000000c]    syscall                        #  syscall
+666    615    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+667    616    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+668           [0x34840126]    ori    $a0, $a0, 294
+669    617    [0x0000000c]    syscall                        #  syscall
+670    618    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+671    619    [0x1000fff2]    beq    $zero, $zero, label_14  #  b       label_14
+
+label_15:
+672    622    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+673    623    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+674           [0x34840026]    ori    $a0, $a0, 38
+675    624    [0x0000000c]    syscall                        #  syscall
+676    627    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+677    628    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+678           [0x34840030]    ori    $a0, $a0, 48
+679    629    [0x0000000c]    syscall                        #  syscall
+680    630    [0x00162021]    addu   $a0, $zero, $s6         #  move    $a0, $s6
+681    631    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+682    632    [0x0000000c]    syscall                        #  syscall
+683    634    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+684    635    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_26
+685           [0x34840191]    ori    $a0, $a0, 401
+686    636    [0x0000000c]    syscall                        #  syscall
+687    637    [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+688    638    [0x00162021]    addu   $a0, $zero, $s6         #  move    $a0, $s6
+689    639    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_1
+690           [0x34a501c9]    ori    $a1, $a1, 457
+691    640    [0x2006000a]    addi   $a2, $zero, 10          #  li      $a2, 10
+692    641    [0x0000000c]    syscall                        #  syscall
+693    643    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+694    644    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+695    645    [0x0000000c]    syscall                        #  syscall
+696    647    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+697    648    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+698           [0x34840026]    ori    $a0, $a0, 38
+699    649    [0x0000000c]    syscall                        #  syscall
+700    652    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+701    653    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+702           [0x34840078]    ori    $a0, $a0, 120
+703    654    [0x0000000c]    syscall                        #  syscall
+704    655    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+705    656    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+706    657    [0x0000000c]    syscall                        #  syscall
+707    659    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+708    660    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_27
+709           [0x348401a3]    ori    $a0, $a0, 419
+710    661    [0x0000000c]    syscall                        #  syscall
+711    662    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+712    663    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+713    664    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+714           [0x34a501f1]    ori    $a1, $a1, 497
+715    665    [0x20060005]    addi   $a2, $zero, 5           #  li      $a2, 5
+716    666    [0x0000000c]    syscall                        #  syscall
+717    668    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+718    669    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+719    670    [0x0000000c]    syscall                        #  syscall
+720    672    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+721    673    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+722           [0x34840026]    ori    $a0, $a0, 38
+723    674    [0x0000000c]    syscall                        #  syscall
+724    676    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+725    677    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_23
+726           [0x3484014a]    ori    $a0, $a0, 330
+727    678    [0x0000000c]    syscall                        #  syscall
+728    679    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_16:
+729    681    [0x34010005]    ori    $at, $zero, 5           #  bge     $t0, 5, label_17
+730           [0x0101082a]    slt    $at, $t0, $at
+731           [0x1020000d]    beq    $at, $zero, label_17
+732    682    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_5($t0)
+733           [0x342101f1]    ori    $at, $at, 497
+734           [0x00280821]    addu   $at, $at, $t0
+735           [0x80240000]    lb     $a0, ($at)
+736    683    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+737    684    [0x0000000c]    syscall                        #  syscall
+738    686    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+739    687    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+740           [0x34840126]    ori    $a0, $a0, 294
+741    688    [0x0000000c]    syscall                        #  syscall
+742    689    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+743    690    [0x1000fff2]    beq    $zero, $zero, label_16  #  b       label_16
+
+label_17:
+744    693    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+745    694    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+746           [0x34840026]    ori    $a0, $a0, 38
+747    695    [0x0000000c]    syscall                        #  syscall
+748    698    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+749    699    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_4
+750           [0x34840030]    ori    $a0, $a0, 48
+751    700    [0x0000000c]    syscall                        #  syscall
+752    701    [0x00142021]    addu   $a0, $zero, $s4         #  move    $a0, $s4
+753    702    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+754    703    [0x0000000c]    syscall                        #  syscall
+755    705    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+756    706    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_28
+757           [0x348401b4]    ori    $a0, $a0, 436
+758    707    [0x0000000c]    syscall                        #  syscall
+759    708    [0x2002000f]    addi   $v0, $zero, 15          #  li      $v0, 15
+760    709    [0x00142021]    addu   $a0, $zero, $s4         #  move    $a0, $s4
+761    710    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_1 + 3
+762           [0x34a501cc]    ori    $a1, $a1, 460
+763    711    [0x20060006]    addi   $a2, $zero, 6           #  li      $a2, 6
+764    712    [0x0000000c]    syscall                        #  syscall
+765    714    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+766    715    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+767    716    [0x0000000c]    syscall                        #  syscall
+768    718    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+769    719    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+770           [0x34840026]    ori    $a0, $a0, 38
+771    720    [0x0000000c]    syscall                        #  syscall
+772    723    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+773    724    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+774           [0x34840078]    ori    $a0, $a0, 120
+775    725    [0x0000000c]    syscall                        #  syscall
+776    726    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+777    727    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+778    728    [0x0000000c]    syscall                        #  syscall
+779    730    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+780    731    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_18
+781           [0x348400f9]    ori    $a0, $a0, 249
+782    732    [0x0000000c]    syscall                        #  syscall
+783    733    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+784    734    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+785    735    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+786           [0x34a501f1]    ori    $a1, $a1, 497
+787    736    [0x2006000a]    addi   $a2, $zero, 10          #  li      $a2, 10
+788    737    [0x0000000c]    syscall                        #  syscall
+789    739    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+790    740    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+791    741    [0x0000000c]    syscall                        #  syscall
+792    743    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+793    744    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+794           [0x34840026]    ori    $a0, $a0, 38
+795    745    [0x0000000c]    syscall                        #  syscall
+796    747    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+797    748    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_23
+798           [0x3484014a]    ori    $a0, $a0, 330
+799    749    [0x0000000c]    syscall                        #  syscall
+800    750    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_18:
+801    752    [0x3401000a]    ori    $at, $zero, 10          #  bge     $t0, 10, label_19
+802           [0x0101082a]    slt    $at, $t0, $at
+803           [0x1020000d]    beq    $at, $zero, label_19
+804    753    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_5($t0)
+805           [0x342101f1]    ori    $at, $at, 497
+806           [0x00280821]    addu   $at, $at, $t0
+807           [0x80240000]    lb     $a0, ($at)
+808    754    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+809    755    [0x0000000c]    syscall                        #  syscall
+810    757    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+811    758    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+812           [0x34840126]    ori    $a0, $a0, 294
+813    759    [0x0000000c]    syscall                        #  syscall
+814    760    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+815    761    [0x1000fff2]    beq    $zero, $zero, label_18  #  b       label_18
+
+label_19:
+816    764    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+817    765    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+818           [0x34840026]    ori    $a0, $a0, 38
+819    766    [0x0000000c]    syscall                        #  syscall
+820    769    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+821    770    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_13
+822           [0x348400b0]    ori    $a0, $a0, 176
+823    771    [0x0000000c]    syscall                        #  syscall
+824    772    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+825    773    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+826    774    [0x0000000c]    syscall                        #  syscall
+827    776    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+828    777    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_14
+829           [0x348400b7]    ori    $a0, $a0, 183
+830    778    [0x0000000c]    syscall                        #  syscall
+831    779    [0x20020010]    addi   $v0, $zero, 16          #  li      $v0, 16
+832    780    [0x00152021]    addu   $a0, $zero, $s5         #  move    $a0, $s5
+833    781    [0x0000000c]    syscall                        #  syscall
+834    783    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+835    784    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+836    785    [0x0000000c]    syscall                        #  syscall
+837    787    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+838    788    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+839           [0x34840026]    ori    $a0, $a0, 38
+840    789    [0x0000000c]    syscall                        #  syscall
+841    793    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+842    794    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_7
+843           [0x3484005d]    ori    $a0, $a0, 93
+844    795    [0x0000000c]    syscall                        #  syscall
+845    796    [0x2002000d]    addi   $v0, $zero, 13          #  li      $v0, 13
+846    797    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_0
+847           [0x34840000]    ori    $a0, $a0, 0
+848    798    [0x20050000]    addi   $a1, $zero, 0           #  li      $a1, 0
+849    799    [0x0000000c]    syscall                        #  syscall
+850    800    [0x00029021]    addu   $s2, $zero, $v0         #  move    $s2, $v0
+851    802    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+852    803    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+853    804    [0x0000000c]    syscall                        #  syscall
+854    806    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+855    807    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+856           [0x34840026]    ori    $a0, $a0, 38
+857    808    [0x0000000c]    syscall                        #  syscall
+858    811    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+859    812    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_8
+860           [0x34840078]    ori    $a0, $a0, 120
+861    813    [0x0000000c]    syscall                        #  syscall
+862    814    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+863    815    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+864    816    [0x0000000c]    syscall                        #  syscall
+865    818    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+866    819    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_18
+867           [0x348400f9]    ori    $a0, $a0, 249
+868    820    [0x0000000c]    syscall                        #  syscall
+869    821    [0x2002000e]    addi   $v0, $zero, 14          #  li      $v0, 14
+870    822    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+871    823    [0x3c051001]    lui    $a1, 4097               #  la      $a1, buf_5
+872           [0x34a501f1]    ori    $a1, $a1, 497
+873    824    [0x2006000a]    addi   $a2, $zero, 10          #  li      $a2, 10
+874    825    [0x0000000c]    syscall                        #  syscall
+875    827    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+876    828    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+877    829    [0x0000000c]    syscall                        #  syscall
+878    831    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+879    832    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+880           [0x34840026]    ori    $a0, $a0, 38
+881    833    [0x0000000c]    syscall                        #  syscall
+882    835    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+883    836    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_23
+884           [0x3484014a]    ori    $a0, $a0, 330
+885    837    [0x0000000c]    syscall                        #  syscall
+886    838    [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0
+
+label_20:
+887    840    [0x3401000a]    ori    $at, $zero, 10          #  bge     $t0, 10, label_21
+888           [0x0101082a]    slt    $at, $t0, $at
+889           [0x1020000d]    beq    $at, $zero, label_21
+890    841    [0x3c011001]    lui    $at, 4097               #  lb      $a0, buf_5($t0)
+891           [0x342101f1]    ori    $at, $at, 497
+892           [0x00280821]    addu   $at, $at, $t0
+893           [0x80240000]    lb     $a0, ($at)
+894    842    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+895    843    [0x0000000c]    syscall                        #  syscall
+896    845    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+897    846    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_20
+898           [0x34840126]    ori    $a0, $a0, 294
+899    847    [0x0000000c]    syscall                        #  syscall
+900    848    [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1
+901    849    [0x1000fff2]    beq    $zero, $zero, label_20  #  b       label_20
+
+label_21:
+902    852    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+903    853    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+904           [0x34840026]    ori    $a0, $a0, 38
+905    854    [0x0000000c]    syscall                        #  syscall
+906    857    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+907    858    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_13
+908           [0x348400b0]    ori    $a0, $a0, 176
+909    859    [0x0000000c]    syscall                        #  syscall
+910    860    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+911    861    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+912    862    [0x0000000c]    syscall                        #  syscall
+913    864    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+914    865    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_14
+915           [0x348400b7]    ori    $a0, $a0, 183
+916    866    [0x0000000c]    syscall                        #  syscall
+917    867    [0x20020010]    addi   $v0, $zero, 16          #  li      $v0, 16
+918    868    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+919    869    [0x0000000c]    syscall                        #  syscall
+920    871    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+921    872    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+922    873    [0x0000000c]    syscall                        #  syscall
+923    875    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+924    876    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+925           [0x34840026]    ori    $a0, $a0, 38
+926    877    [0x0000000c]    syscall                        #  syscall
+927    880    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+928    881    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_13
+929           [0x348400b0]    ori    $a0, $a0, 176
+930    882    [0x0000000c]    syscall                        #  syscall
+931    883    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+932    884    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+933    885    [0x0000000c]    syscall                        #  syscall
+934    887    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+935    888    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_14
+936           [0x348400b7]    ori    $a0, $a0, 183
+937    889    [0x0000000c]    syscall                        #  syscall
+938    890    [0x20020010]    addi   $v0, $zero, 16          #  li      $v0, 16
+939    891    [0x00122021]    addu   $a0, $zero, $s2         #  move    $a0, $s2
+940    892    [0x0000000c]    syscall                        #  syscall
+941    894    [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+942    895    [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+943    896    [0x0000000c]    syscall                        #  syscall
+944    898    [0x20020004]    addi   $v0, $zero, 4           #  li      $v0, 4
+945    899    [0x3c041001]    lui    $a0, 4097               #  la      $a0, string_2
+946           [0x34840026]    ori    $a0, $a0, 38
+947    900    [0x0000000c]    syscall                        #  syscall
+948    901    [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+949    902    [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 517 bytes

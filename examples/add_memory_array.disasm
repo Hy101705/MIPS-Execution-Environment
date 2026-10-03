@@ -1,0 +1,19 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x3c081001]    lui    $t0, 4097               #  la      $t0, x
+1             [0x35080000]    ori    $t0, $t0, 0
+2      3      [0x8d090000]    lw     $t1, ($t0)              #  lw      $t1, 0($t0)
+3      4      [0x8d0a0004]    lw     $t2, 4($t0)             #  lw      $t2, 4($t0)
+4      5      [0x012a5820]    add    $t3, $t1, $t2           #  add     $t3, $t1, $t2           # x[2] = x[0] + x[1];
+5      6      [0xad0b0008]    sw     $t3, 8($t0)             #  sw      $t3, 8($t0)
+6      8      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+7      9      [0x8d040008]    lw     $a0, 8($t0)             #  lw      $a0, 8($t0)             #
+8      10     [0x0000000c]    syscall                        #  syscall                         # printf("%d", x[2]);
+9      12     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                 # syscall 11: print_char
+10     13     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'               #
+11     14     [0x0000000c]    syscall                        #  syscall                         # putchar('\n');
+12     16     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+13     17     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 12 bytes

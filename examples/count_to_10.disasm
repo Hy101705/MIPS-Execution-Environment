@@ -1,0 +1,28 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+loop_i_to_10__init:
+0      7      [0x20080001]    addi   $t0, $zero, 1           #  li      $t0, 1                          # int i = 1;
+
+loop_i_to_10__cond:
+1      9      [0x3401000a]    ori    $at, $zero, 10          #  bgt     $t0, 10, loop_i_to_10__end      # if (i > 10) goto loop_i_to_10__end;
+2             [0x0028082a]    slt    $at, $at, $t0
+3             [0x14200009]    bne    $at, $zero, loop_i_to_10__end
+
+loop_i_to_10__body:
+4      12     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                          # syscall 1: print_int
+5      13     [0x00082021]    addu   $a0, $zero, $t0         #  move    $a0, $t0                        #
+6      14     [0x0000000c]    syscall                        #  syscall                                 # printf("%d", i);
+7      16     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                         # syscall 11: print_char
+8      17     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'                       #
+9      18     [0x0000000c]    syscall                        #  syscall                                 # putchar('\n');
+
+loop_i_to_10__step:
+10     21     [0x21080001]    addi   $t0, $t0, 1             #  addi    $t0, $t0, 1                     # i = i + 1;
+11     22     [0x1000fff6]    beq    $zero, $zero, loop_i_to_10__cond #  b       loop_i_to_10__cond
+
+loop_i_to_10__end:
+12     25     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+13     26     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

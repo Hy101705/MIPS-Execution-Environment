@@ -1,0 +1,22 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      6      [0x3c011001]    lui    $at, 4097               #  lh      $t1, global_counter
+1             [0x34210000]    ori    $at, $at, 0
+2             [0x84290000]    lh     $t1, ($at)
+3      7      [0x21290001]    addi   $t1, $t1, 1             #  addi    $t1, $t1, 1
+4      8      [0x3c011001]    lui    $at, 4097               #  lh      $t1, global_counter     # global_counter = global_counter + 1;
+5             [0x34210000]    ori    $at, $at, 0
+6             [0x84290000]    lh     $t1, ($at)
+7      10     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                  # syscall 1: print_int
+8      11     [0x3c081001]    lui    $t0, 4097               #  la      $t0, global_counter     #
+9             [0x35080000]    ori    $t0, $t0, 0
+10     12     [0x85040000]    lh     $a0, ($t0)              #  lh      $a0, 0($t0)
+11     13     [0x0000000c]    syscall                        #  syscall                         # printf("%d", global_counter);
+12     15     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                 # syscall 11: print_char
+13     16     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+14     17     [0x0000000c]    syscall                        #  syscall                         # putchar('\n');
+15     19     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+16     20     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 4 bytes

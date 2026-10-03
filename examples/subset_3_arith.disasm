@@ -1,0 +1,25 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x3c09abcd]    lui    $t1, 43981              #  li      $t1, 0xabcddcba
+1             [0x3529dcba]    ori    $t1, $t1, 56506
+2      3      [0x3c0af00d]    lui    $t2, 61453              #  li      $t2, 0xf00df00d
+3             [0x354af00d]    ori    $t2, $t2, 61453
+4      4      [0x012a4021]    addu   $t0, $t1, $t2           #  addu    $t0, $t1, $t2
+5      5      [0x00082021]    addu   $a0, $zero, $t0         #  move    $a0, $t0
+6      6      [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+7      7      [0x0000000c]    syscall                        #  syscall
+8      9      [0x20040020]    addi   $a0, $zero, 32          #  li      $a0, ' '
+9      10     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+10     11     [0x0000000c]    syscall                        #  syscall
+11     13     [0x200b05f1]    addi   $t3, $zero, 0x5f1        #  li      $t3, 0x5f1
+12     14     [0x710b2002]    mul    $a0, $t0, $t3           #  mul     $a0, $t0, $t3
+13     15     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1
+14     16     [0x0000000c]    syscall                        #  syscall
+15     18     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'
+16     19     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+17     20     [0x0000000c]    syscall                        #  syscall
+18     22     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+19     23     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

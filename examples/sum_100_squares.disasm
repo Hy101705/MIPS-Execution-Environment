@@ -1,0 +1,32 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      11     [0x20080000]    addi   $t0, $zero, 0           #  li      $t0, 0                                  # int sum = 0;
+
+loop_i_to_100__init:
+1      14     [0x20090001]    addi   $t1, $zero, 1           #  li      $t1, 1                                  # int i = 0;
+
+loop_i_to_100__cond:
+2      16     [0x34010064]    ori    $at, $zero, 100         #  bgt     $t1, UPPER_BOUND, loop_i_to_100__end    # while (i < UPPER_BOUND) {
+3             [0x0029082a]    slt    $at, $at, $t1
+4             [0x14200005]    bne    $at, $zero, loop_i_to_100__end
+
+loop_i_to_100__body:
+5      18     [0x71295002]    mul    $t2, $t1, $t1           #  mul     $t2, $t1, $t1                           #   sum = (i * i) +
+6      19     [0x010a4020]    add    $t0, $t0, $t2           #  add     $t0, $t0, $t2                           #         sum;
+
+loop_i_to_100__step:
+7      21     [0x21290001]    addi   $t1, $t1, 1             #  addi    $t1, $t1, 1                             #   i++;
+8      22     [0x1000fffa]    beq    $zero, $zero, loop_i_to_100__cond #  b       loop_i_to_100__cond                     # }
+
+loop_i_to_100__end:
+9      25     [0x20020001]    addi   $v0, $zero, 1           #  li      $v0, 1                                  # syscall 1: print_int
+10     26     [0x00082021]    addu   $a0, $zero, $t0         #  move    $a0, $t0                                #
+11     27     [0x0000000c]    syscall                        #  syscall                                         # printf("%d", sum);
+12     29     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11                                 # syscall 11: print_char
+13     30     [0x2004000a]    addi   $a0, $zero, 10          #  li      $a0, '\n'                               #
+14     31     [0x0000000c]    syscall                        #  syscall                                         # putchar('\n');
+15     33     [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+16     34     [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

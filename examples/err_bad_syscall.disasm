@@ -1,0 +1,10 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+main:
+0      2      [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+1      3      [0x2004002a]    addi   $a0, $zero, 42          #  li      $a0, '*'
+2      4      [0x0000000c]    syscall                        #  syscall
+3      6      [0x2002001e]    addi   $v0, $zero, 30          #  li      $v0, 30
+4      7      [0x0000000c]    syscall                        #  syscall
+
+Data segment size: 0 bytes

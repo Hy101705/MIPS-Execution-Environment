@@ -1,0 +1,20 @@
+<idx>  <line> <opcode>        <disassembled instruction>       <original assembly>
+
+done:
+0      5      [0x2002000a]    addi   $v0, $zero, 10          #  li      $v0, 10
+1      6      [0x0000000c]    syscall                        #  syscall
+
+main:
+2      10     [0x2002000c]    addi   $v0, $zero, 12          #  li      $v0, 12
+3      11     [0x0000000c]    syscall                        #  syscall
+4      14     [0x3c01ffff]    lui    $at, 65535              #  beq     $v0, EOF, done
+5             [0x3421ffff]    ori    $at, $at, 65535
+6             [0x1041fffa]    beq    $v0, $at, done
+7      16     [0x34010065]    ori    $at, $zero, 101         #  beq     $v0, 'e', main
+8             [0x1041fffa]    beq    $v0, $at, main
+9      19     [0x00022021]    addu   $a0, $zero, $v0         #  move    $a0, $v0
+10     20     [0x2002000b]    addi   $v0, $zero, 11          #  li      $v0, 11
+11     21     [0x0000000c]    syscall                        #  syscall
+12     23     [0x1000fff6]    beq    $zero, $zero, main      #  b       main
+
+Data segment size: 0 bytes
